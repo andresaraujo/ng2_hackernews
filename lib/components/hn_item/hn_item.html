@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="packages/ng2_hackernews/components/hn_item/hn_item.css">
+
+<div class="hnItem-loading spinner" *if="data == null">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+</div>
+
+<div class="hnItem-container" *if="data != null">
+    <div [switch]="type">
+        <span>{{data['type']}}</span>
+        <template [switch-when]="1">
+            <div class="hnItem--comment">
+                <header>
+          <span class="u-pointer" (click)="collapsed = !collapsed" *if="!topLevel">
+            [{{collapsed ? '+' : '-'}}]
+          </span>
+                    <a [href]="urlForUser(data['by'])" class="hnItem-author">{{data['by']}}</a>
+                    <span>{{timeAgo(data['time'])}}</span> |
+                    <a [href]="urlForItem(data['id'])">link</a>
+                </header>
+                <section class="hnItem--coment-content" [hidden]="data == null || collapsed == true">{{data['text']}}
+                </section>
+                <div class="hnItem--comment-children" *if="loadChildren == true && data['kids'] != null"
+                     [hidden]="collapsed">
+                    <div *for="#kidId of data['kids']">
+                        child id: {{kidId}}
+                        <hn-item item-id="{{['kidId']}}"></hn-item>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template [switch-when]="2">
+            <div class="hnItem--story">
+                <header>
+                    <a class="hnItem-title" [href]="data['url']">{{data['title']}}</a>
+                    <span class="comhead" [hidden]="data['url'] != null">({{domainPipe(data['url'])}})</span>
+                </header>
+                <section [hidden]="data == null">
+                    <span>{{timeAgo(data['time'])}}</span>
+                </section>
+            </div>
+        </template>
+        <template [switch-when]="3">
+            <div class="hnItem--story">
+                <header>
+                    <a class="hnItem-title" [href]="data['url']">{{data['title']}}</a>
+                    <span class="comhead" [hidden]="data['url'] != null">({{domainPipe(data['url'])}})</span>
+                </header>
+                <section [hidden]="data == null">
+                    <span>{{data['score']}} points</span> by1
+                    <a [href]="urlForUser(data['by'])">{{data['by']}}</a>
+                    <span>{{timeAgo(data['time'])}}</span> |
+                    <a [href]="urlForItem(data['id'])">comments</a>
+                </section>
+            </div>
+        </template>
+        <!-- template [switch-default] -->
+        <template [switch-when]="4">
+            <div class="hnItem--story">
+                <header>
+                    <a class="hnItem-title" [href]="data['url']">{{data['title']}}</a>
+                    <span class="comhead" [hidden]="data['url'] != null">({{domainPipe(data['url'])}})</span>
+                </header>
+                <section [hidden]="data == null">
+                    <span>{{data['score']}} points</span> by2
+                    <a [href]="urlForUser(data['by'])">{{data['by']}}</a>
+                    <span>{{timeAgo(data['time'])}}</span> |
+                    <a [href]="urlForItem(data['id'])">comments</a>
+                </section>
+            </div>
+        </template>
+
+    </div>
+
+</div>
