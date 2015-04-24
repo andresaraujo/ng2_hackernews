@@ -48,7 +48,7 @@
                     <span class="comhead" [hidden]="data['url'] != null">({{domainPipe(data['url'])}})</span>
                 </header>
                 <section [hidden]="data == null">
-                    <span>{{data['score']}} points</span> by1
+                    <span>{{data['score']}} points</span> by
                     <a [href]="urlForUser(data['by'])">{{data['by']}}</a>
                     <span>{{timeAgo(data['time'])}}</span> |
                     <a [href]="urlForItem(data['id'])">comments</a>
@@ -63,7 +63,7 @@
                     <span class="comhead" [hidden]="data['url'] != null">({{domainPipe(data['url'])}})</span>
                 </header>
                 <section [hidden]="data == null">
-                    <span>{{data['score']}} points</span> by2
+                    <span>{{data['score']}} points</span> by
                     <a [href]="urlForUser(data['by'])">{{data['by']}}</a>
                     <span>{{timeAgo(data['time'])}}</span> |
                     <a [href]="urlForItem(data['id'])">comments</a>

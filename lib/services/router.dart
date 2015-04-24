@@ -26,12 +26,4 @@ class Router {
 
     return parsed;
   }
-
-  urlForUser(id) {
-    return "index.html?userId=${id}";
-  }
-
-  urlForItem(id) {
-    return "index.html?itemId=${id}";
-  }
 }
