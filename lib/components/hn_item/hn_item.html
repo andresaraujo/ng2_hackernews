@@ -7,10 +7,8 @@
     <div class="rect4"></div>
     <div class="rect5"></div>
 </div>
-
 <div class="hnItem-container" *if="data != null">
     <div [switch]="type">
-        <span>{{data['type']}}</span>
         <template [switch-when]="1">
             <div class="hnItem--comment">
                 <header>
