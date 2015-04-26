@@ -6,7 +6,6 @@ import '../../services/hn_api.dart';
 
 const itemMap = const {'comment': 1, 'job': 2, 'poll': 3, 'story': 4};
 final fuzzyTime = new TimeAgo();
-int currentTime = new DateTime.now().millisecondsSinceEpoch;
 
 @Component(
     selector: 'hn-item',

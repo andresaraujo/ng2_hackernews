@@ -7,7 +7,6 @@ import '../../services/hn_api.dart';
 import '../../services/router.dart';
 
 final fuzzyTime = new TimeAgo();
-int currentTime = new DateTime.now().millisecondsSinceEpoch;
 
 @Component(selector: 'page-user', injectables: const [HNApi])
 @View(
