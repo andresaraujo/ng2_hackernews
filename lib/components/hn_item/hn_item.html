@@ -16,7 +16,7 @@
             [{{collapsed ? '+' : '-'}}]
           </span>
                     <a [href]="urlForUser(data['by'])" class="hnItem-author">{{data['by']}}</a>
-                    <span>{{timeAgo(data['time'])}}</span> |
+                    <span>{{timeAgo}}</span> |
                     <a [href]="urlForItem(data['id'])">link</a>
                 </header>
                 <section class="hnItem--coment-content" [hidden]="data == null || collapsed == true">{{data['text']}}
@@ -37,7 +37,7 @@
                     <span class="comhead" [hidden]="data['url'] != null">({{domainPipe(data['url'])}})</span>
                 </header>
                 <section [hidden]="data == null">
-                    <span>{{timeAgo(data['time'])}}</span>
+                    <span>{{timeAgo}}</span>
                 </section>
             </div>
         </template>
@@ -50,7 +50,7 @@
                 <section [hidden]="data == null">
                     <span>{{data['score']}} points</span> by
                     <a [href]="urlForUser(data['by'])">{{data['by']}}</a>
-                    <span>{{timeAgo(data['time'])}}</span> |
+                    <span>{{timeAgo}}</span> |
                     <a [href]="urlForItem(data['id'])">comments</a>
                 </section>
             </div>
@@ -65,7 +65,7 @@
                 <section [hidden]="data == null">
                     <span>{{data['score']}} points</span> by
                     <a [href]="urlForUser(data['by'])">{{data['by']}}</a>
-                    <span>{{timeAgo(data['time'])}}</span> |
+                    <span>{{timeAgo}}</span> |
                     <a [href]="urlForItem(data['id'])">comments</a>
                 </section>
             </div>

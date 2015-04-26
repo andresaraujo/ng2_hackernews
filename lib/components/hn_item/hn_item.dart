@@ -1,9 +1,12 @@
 library hacker_news.components.hnitem;
 
 import 'package:angular2/angular2.dart';
+import 'package:timeago/timeago.dart';
 import '../../services/hn_api.dart';
 
 const itemMap = const {'comment': 1, 'job': 2, 'poll': 3, 'story': 4};
+final fuzzyTime = new TimeAgo();
+int currentTime = new DateTime.now().millisecondsSinceEpoch;
 
 @Component(
     selector: 'hn-item',
@@ -23,8 +26,8 @@ class HNItem {
   String itemId;
   var data;
   bool collapsed = false;
-
   int type = 0;
+  String timeAgo;
 
   HNItem(this.hnApi);
 
@@ -44,6 +47,7 @@ class HNItem {
   fetchData() async {
     data = await hnApi.fetchItem(this.itemId);
     type = itemMap[data['type']];
+    timeAgo = fuzzyTime.timeAgo(currentTime - (currentTime - data['time'] * 1000));
   }
 
   domainPipe(String url) {
@@ -59,5 +63,4 @@ class HNItem {
   urlForItem(id) {
     return "index.html?itemId=${id}";
   }
-  timeAgo(val) => "$val";
 }
