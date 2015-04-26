@@ -12,5 +12,6 @@ dependencies:
   timeago: any
   less_dart: any
   browser: any
+  html: any
 transformers:
   - less_dart
