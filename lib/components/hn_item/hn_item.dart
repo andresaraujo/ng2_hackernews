@@ -47,7 +47,7 @@ class HNItem {
   fetchData() async {
     data = await hnApi.fetchItem(this.itemId);
     type = itemMap[data['type']];
-    timeAgo = fuzzyTime.timeAgo(currentTime - (currentTime - data['time'] * 1000));
+    timeAgo = fuzzyTime.timeAgo(data['time'] * 1000);
   }
 
   domainPipe(String url) {

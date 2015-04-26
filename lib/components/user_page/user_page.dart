@@ -26,6 +26,6 @@ class UserPage {
   _fetchUser(String userId) async {
     data = await api.fetchUser(userId) as Map;
     data['submitted'] = (data['submitted'] as List).take(30);
-    timeAgo = fuzzyTime.timeAgo(currentTime - (currentTime - data['created'] * 1000));
+    timeAgo = fuzzyTime.timeAgo(data['created'] * 1000);
   }
 }
