@@ -24,8 +24,7 @@
                 <div class="hnItem--comment-children" *if="loadChildren == true && data['kids'] != null"
                      [hidden]="collapsed">
                     <div *for="#kidId of data['kids']">
-                        child id: {{kidId}}
-                        <hn-item item-id="{{['kidId']}}"></hn-item>
+                        <hn-item item-id="{{kidId}}"></hn-item>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@ final fuzzyTime = new TimeAgo();
 })
 @View(
     templateUrl: 'packages/ng2_hackernews/components/hn_item/hn_item.html',
-    directives: const [For, If, Switch, SwitchWhen, SwitchDefault])
+    directives: const [For, If, Switch, SwitchWhen, SwitchDefault, HNItem])
 class HNItem {
   HNApi hnApi;
   bool loadChildren = true;
