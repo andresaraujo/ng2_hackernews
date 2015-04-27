@@ -1,4 +1,4 @@
-library hacker_news.components.parse_html;
+library hacker_news.decorators.parse_html;
 
 import 'dart:html' as dom;
 import 'package:angular2/angular2.dart';

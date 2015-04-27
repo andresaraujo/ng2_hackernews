@@ -3,7 +3,7 @@ library hacker_news.components.hnitem;
 import 'package:angular2/angular2.dart';
 import 'package:timeago/timeago.dart';
 import '../../services/hn_api.dart';
-import '../parse_html/parse_html.dart';
+import '../../decorators/parse_html/parse_html.dart';
 
 const itemMap = const {'comment': 1, 'job': 2, 'poll': 3, 'story': 4};
 final fuzzyTime = new TimeAgo();

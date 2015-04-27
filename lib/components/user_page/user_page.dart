@@ -3,7 +3,7 @@ library hacker_news.components.user_page;
 import 'package:angular2/angular2.dart';
 import 'package:timeago/timeago.dart';
 import '../hn_item/hn_item.dart';
-import '../parse_html/parse_html.dart';
+import '../../decorators/parse_html/parse_html.dart';
 import '../../services/hn_api.dart';
 import '../../services/router.dart';
 
