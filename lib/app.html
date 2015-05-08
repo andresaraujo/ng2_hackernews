@@ -21,6 +21,7 @@
     </table>
 </div>
 
+<!-- TODO: use <router-outlet></router-outlet> -->
 <page-item *if="router.itemId != null"></page-item>
 <page-user *if="router.userId != null"></page-user>
 <home-page *if="!(router.itemId != null || router.userId != null)"></home-page>

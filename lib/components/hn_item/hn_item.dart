@@ -1,6 +1,7 @@
 library hacker_news.components.hnitem;
 
 import 'package:angular2/angular2.dart';
+import 'package:angular2/router.dart' show Router, RouterLink;
 import 'package:timeago/timeago.dart';
 import '../../services/hn_api.dart';
 import '../../decorators/parse_html/parse_html.dart';
@@ -25,10 +26,12 @@ final fuzzyTime = new TimeAgo();
   SwitchWhen,
   SwitchDefault,
   HNItem,
-  ParseHtml
+  ParseHtml,
+  RouterLink
 ])
 class HNItem {
   HNApi hnApi;
+  Router router;
   bool loadChildren = true;
   bool topLevel = false;
   String itemId;
@@ -37,7 +40,7 @@ class HNItem {
   int type = 0;
   String timeAgo;
 
-  HNItem(this.hnApi);
+  HNItem(this.hnApi, this.router);
 
   set newItemId(itemId) {
     this.itemId = itemId.toString();
@@ -69,6 +72,7 @@ class HNItem {
     return "index.html?userId=${id}";
   }
   urlForItem(id) {
+    //TODO: switch to router-link, <a href="item" router-link="item" [router-params]="{ 'id': data['id']}">link</a>
     return "index.html?itemId=${id}";
   }
 }

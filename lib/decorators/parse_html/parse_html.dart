@@ -4,12 +4,15 @@ import 'dart:html' as dom;
 import 'package:angular2/angular2.dart';
 import 'package:html/parser.dart' show parse;
 
-@Decorator(selector: '[parsehtml]', properties: const {'element': 'parsehtml'})
+@Directive(selector: '[parsehtml]', lifecycle: const [onAllChangesDone])
 class ParseHtml {
-  dom.Element _element;
-  set element(dom.Element element) {
-    _element = element;
-    //element.style.color = "red";
+
+  ElementRef ref;
+
+  ParseHtml(this.ref);
+
+  onAllChangesDone() {
+    dom.Element element = ref.domElement;
     String raw = element.text;
     element.text = "";
     element.appendHtml(parse(raw).outerHtml);

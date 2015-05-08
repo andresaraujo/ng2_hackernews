@@ -2,7 +2,7 @@ library hacker_news.components.item;
 
 import 'package:angular2/angular2.dart';
 import '../../services/hn_api.dart';
-import '../../services/router.dart';
+import '../../services/router.dart' as r;
 import '../hn_item/hn_item.dart';
 
 @Component(selector: 'page-item', injectables: const [HNApi])
@@ -14,8 +14,8 @@ class ItemPage {
   List<String> childrenIds = [];
   String itemId;
 
-  ItemPage(this.api, Router router) {
-    itemId = router.itemId;
+  ItemPage(this.api, r.Router router) {
+    itemId = router.itemId; // TODO: switch to routeParams.get('id'); when router work
     _fetchItem();
   }
   _fetchItem() async {

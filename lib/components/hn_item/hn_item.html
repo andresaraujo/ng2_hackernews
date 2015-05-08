@@ -20,7 +20,7 @@
                     <a [href]="urlForItem(data['id'])">link</a>
                 </header>
                 <section class="hnItem--coment-content" [hidden]="data == null || collapsed == true">
-                    <span #comment [parsehtml]="comment">{{data['text']}}</span>
+                    <span parsehtml>{{data['text']}}</span>
                 </section>
                 <div class="hnItem--comment-children" *if="loadChildren == true && data['kids'] != null"
                      [hidden]="collapsed">
