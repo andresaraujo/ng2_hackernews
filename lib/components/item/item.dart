@@ -15,7 +15,8 @@ class ItemPage {
   String itemId;
 
   ItemPage(this.api, r.Router router) {
-    itemId = router.itemId; // TODO: switch to routeParams.get('id'); when router work
+    itemId =
+        router.itemId; // TODO: switch to routeParams.get('id'); when router work
     _fetchItem();
   }
   _fetchItem() async {

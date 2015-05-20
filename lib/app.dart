@@ -13,16 +13,16 @@ import 'components/user_page/user_page.dart';
     templateUrl: 'packages/ng2_hackernews/app.html',
     directives: const [NgIf, NgFor, RouterOutlet, UserPage, ItemPage, Home])
 @RouteConfig(const [
-  const {'path' : '/user/:id', 'component' : UserPage, 'alias': 'user'},
-  const {'path' : '/item/:id', 'component' : ItemPage, 'alias': 'item'},
-  const {'path' : '/home', 'component' : Home},
-  const {'path' : '/', 'redirectTo' : '/home'}
+  const {'path': '/user/:id', 'component': UserPage, 'as': 'user'},
+  const {'path': '/item/:id', 'component': ItemPage, 'as': 'item'},
+  const {'path': '/home', 'component': Home, 'as': 'home'},
+  const {'path': '/', 'redirectTo': 'home'}
 ])
 class App {
   r.Router router;
   Router rr;
   App(this.router, this.rr) {
     //rr.navigate('/item/9511504');
-    //rr.navigate('/home');
+    //rr.navigate('home');
   }
 }

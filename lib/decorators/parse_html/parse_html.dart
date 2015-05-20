@@ -6,7 +6,6 @@ import 'package:html/parser.dart' show parse;
 
 @Directive(selector: '[parsehtml]', lifecycle: const [onAllChangesDone])
 class ParseHtml {
-
   ElementRef ref;
 
   ParseHtml(this.ref);
