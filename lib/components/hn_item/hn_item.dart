@@ -11,7 +11,7 @@ final fuzzyTime = new TimeAgo();
 
 @Component(
     selector: 'hn-item',
-    injectables: const [HNApi],
+    appInjector: const [HNApi],
     properties: const {
   'newItemId': 'item-id',
   'newLoadChildren': 'loadChildren',
@@ -20,11 +20,11 @@ final fuzzyTime = new TimeAgo();
 @View(
     templateUrl: 'packages/ng2_hackernews/components/hn_item/hn_item.html',
     directives: const [
-  For,
-  If,
-  Switch,
-  SwitchWhen,
-  SwitchDefault,
+  NgFor,
+  NgIf,
+  NgSwitch,
+  NgSwitchWhen,
+  NgSwitchDefault,
   HNItem,
   ParseHtml,
   RouterLink

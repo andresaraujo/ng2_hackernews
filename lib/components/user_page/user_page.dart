@@ -9,10 +9,10 @@ import '../../services/router.dart';
 
 final fuzzyTime = new TimeAgo();
 
-@Component(selector: 'page-user', injectables: const [HNApi])
+@Component(selector: 'page-user', appInjector: const [HNApi])
 @View(
     templateUrl: 'packages/ng2_hackernews/components/user_page/user_page.html',
-    directives: const [For, If, HNItem, ParseHtml])
+    directives: const [NgFor, NgIf, HNItem, ParseHtml])
 class UserPage {
   HNApi api;
   bool showSubmissions;

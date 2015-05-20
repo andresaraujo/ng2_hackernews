@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="packages/ng2_hackernews/components/user_page/user_page.css">
-<div class="userDetail" *if="data != null && data['id'] != null">
+<div class="userDetail" *ng-if="data != null && data['id'] != null">
     <p>user: {{data['id']}}</p>
     <p>created: <span>{{timeAgo}}</span></p>
     <p>karma:  {{data['karma']}}</p>
@@ -7,8 +7,8 @@
 
     <p>
         <a class="u-pointer"><u (click)="showSubmissions = !showSubmissions">show submitted stories and comments</u></a>
-    <div *if="showSubmissions">
-        <div class="itemDetail-item" *for="#itemId of data['submitted']">
+    <div *ng-if="showSubmissions">
+        <div class="itemDetail-item" *ng-for="#itemId of data['submitted']">
             <hn-item item-id="{{itemId}}" load-children="false"></hn-item>
         </div>
     </div>

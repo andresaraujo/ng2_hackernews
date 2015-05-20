@@ -8,10 +8,10 @@ import 'components/home/home.dart';
 import 'components/item/item.dart';
 import 'components/user_page/user_page.dart';
 
-@Component(selector: 'app', injectables: const [r.Router])
+@Component(selector: 'app', appInjector: const [r.Router])
 @View(
     templateUrl: 'packages/ng2_hackernews/app.html',
-    directives: const [If, For, RouterOutlet, UserPage, ItemPage, Home])
+    directives: const [NgIf, NgFor, RouterOutlet, UserPage, ItemPage, Home])
 @RouteConfig(const [
   const {'path' : '/user/:id', 'component' : UserPage, 'alias': 'user'},
   const {'path' : '/item/:id', 'component' : ItemPage, 'alias': 'item'},

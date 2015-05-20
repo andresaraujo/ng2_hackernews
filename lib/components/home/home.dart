@@ -4,10 +4,10 @@ import 'package:angular2/angular2.dart';
 import '../../services/hn_api.dart';
 import '../hn_item/hn_item.dart';
 
-@Component(selector: 'home-page', injectables: const [HNApi])
+@Component(selector: 'home-page', appInjector: const [HNApi])
 @View(
     templateUrl: "packages/ng2_hackernews/components/home/home.html",
-    directives: const [For, HNItem])
+    directives: const [NgFor, HNItem])
 class Home {
   HNApi api;
   List topStories = [];

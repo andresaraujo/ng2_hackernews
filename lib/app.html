@@ -22,9 +22,9 @@
 </div>
 
 <!-- TODO: use <router-outlet></router-outlet> -->
-<page-item *if="router.itemId != null"></page-item>
-<page-user *if="router.userId != null"></page-user>
-<home-page *if="!(router.itemId != null || router.userId != null)"></home-page>
+<page-item *ng-if="router.itemId != null"></page-item>
+<page-user *ng-if="router.userId != null"></page-user>
+<home-page *ng-if="!(router.itemId != null || router.userId != null)"></home-page>
 
 <div class="footerBar">
     <img src="https://news.ycombinator.com/s.gif" height="10" width="0"/>

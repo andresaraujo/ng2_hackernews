@@ -5,10 +5,10 @@ import '../../services/hn_api.dart';
 import '../../services/router.dart' as r;
 import '../hn_item/hn_item.dart';
 
-@Component(selector: 'page-item', injectables: const [HNApi])
+@Component(selector: 'page-item', appInjector: const [HNApi])
 @View(
     templateUrl: 'packages/ng2_hackernews/components/item/item.html',
-    directives: const [For, HNItem])
+    directives: const [NgFor, HNItem])
 class ItemPage {
   HNApi api;
   List<String> childrenIds = [];
