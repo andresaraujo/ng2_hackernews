@@ -17,4 +17,4 @@ It will be updated to work with the most recent Angular 2 version.
 - Its seems that Dart2Js is failing with the current alpha. but you can test it on 
 [Dartium](https://www.dartlang.org/tools/dartium/)
 
-- Router migration is work in progress, seems to be partially broken(dart) in alpha 24
+- Router migration is work in progress, seems to be partially broken as of alpha 25 ([#1950](https://github.com/angular/angular/issues/1950)) 
