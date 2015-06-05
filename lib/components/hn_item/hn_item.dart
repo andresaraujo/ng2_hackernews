@@ -12,11 +12,7 @@ final fuzzyTime = new TimeAgo();
 @Component(
     selector: 'hn-item',
     appInjector: const [HNApi],
-    properties: const {
-  'newItemId': 'item-id',
-  'newLoadChildren': 'loadChildren',
-  'newTopLevel': 'topLevel'
-})
+    properties: const ['newItemId: item-id', 'newLoadChildren : loadChildren', 'newTopLevel : topLevel'])
 @View(
     templateUrl: 'packages/ng2_hackernews/components/hn_item/hn_item.html',
     directives: const [
