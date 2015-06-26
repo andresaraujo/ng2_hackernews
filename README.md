@@ -13,7 +13,7 @@ It will be updated to work with the most recent Angular 2 version.
 `pub serve`
 #### open http://localhost:8080/
 
-## [Live Demo](https://andresaraujo.github.io/)
+## [Live Demo](https://andresaraujo.github.io/ng2_hackernews)
 
 ## Issues
 
