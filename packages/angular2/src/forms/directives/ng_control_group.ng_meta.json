@@ -1,0 +1,25 @@
+{
+  "NgControlGroup": {
+    "id": "NgControlGroup",
+    "selector": "[ng-control-group]",
+    "compileChildren": true,
+    "hostProperties": {},
+    "hostListeners": {},
+    "hostActions": {},
+    "hostAttributes": {},
+    "properties": [
+      "name: ng-control-group"
+    ],
+    "readAttributes": [],
+    "type": 0,
+    "exportAs": "form",
+    "callOnDestroy": true,
+    "callOnCheck": false,
+    "callOnInit": true,
+    "callOnChange": false,
+    "callOnAllChangesDone": false,
+    "events": [],
+    "changeDetection": null,
+    "version": 1
+  }
+}

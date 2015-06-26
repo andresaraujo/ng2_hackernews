@@ -1,0 +1,25 @@
+{
+  "CSSClass": {
+    "id": "CSSClass",
+    "selector": "[class]",
+    "compileChildren": true,
+    "hostProperties": {},
+    "hostListeners": {},
+    "hostActions": {},
+    "hostAttributes": {},
+    "properties": [
+      "rawClass: class"
+    ],
+    "readAttributes": [],
+    "type": 0,
+    "exportAs": null,
+    "callOnDestroy": false,
+    "callOnCheck": true,
+    "callOnInit": false,
+    "callOnChange": false,
+    "callOnAllChangesDone": false,
+    "events": [],
+    "changeDetection": null,
+    "version": 1
+  }
+}

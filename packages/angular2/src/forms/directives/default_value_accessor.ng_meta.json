@@ -1,0 +1,35 @@
+{
+  "DefaultValueAccessor": {
+    "id": "DefaultValueAccessor",
+    "selector": "input:not([type=checkbox])[ng-control],textarea[ng-control],input:not([type=checkbox])[ng-form-control],textarea[ng-form-control],input:not([type=checkbox])[ng-model],textarea[ng-model]",
+    "compileChildren": true,
+    "hostProperties": {
+      "class.ng-untouched": "ngClassUntouched",
+      "class.ng-touched": "ngClassTouched",
+      "class.ng-pristine": "ngClassPristine",
+      "class.ng-invalid": "ngClassInvalid",
+      "class.ng-valid": "ngClassValid",
+      "class.ng-dirty": "ngClassDirty",
+      "value": "value"
+    },
+    "hostListeners": {
+      "change": "onChange($event.target.value)",
+      "input": "onChange($event.target.value)",
+      "blur": "onTouched()"
+    },
+    "hostActions": {},
+    "hostAttributes": {},
+    "properties": [],
+    "readAttributes": [],
+    "type": 0,
+    "exportAs": null,
+    "callOnDestroy": false,
+    "callOnCheck": false,
+    "callOnInit": false,
+    "callOnChange": false,
+    "callOnAllChangesDone": false,
+    "events": [],
+    "changeDetection": null,
+    "version": 1
+  }
+}

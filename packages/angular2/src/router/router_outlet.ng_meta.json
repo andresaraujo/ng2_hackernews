@@ -1,0 +1,23 @@
+{
+  "RouterOutlet": {
+    "id": "RouterOutlet",
+    "selector": "router-outlet",
+    "compileChildren": true,
+    "hostProperties": {},
+    "hostListeners": {},
+    "hostActions": {},
+    "hostAttributes": {},
+    "properties": [],
+    "readAttributes": [],
+    "type": 0,
+    "exportAs": null,
+    "callOnDestroy": false,
+    "callOnCheck": false,
+    "callOnInit": false,
+    "callOnChange": false,
+    "callOnAllChangesDone": false,
+    "events": [],
+    "changeDetection": null,
+    "version": 1
+  }
+}

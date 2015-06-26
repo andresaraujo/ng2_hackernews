@@ -1,0 +1,28 @@
+{
+  "RouterLink": {
+    "id": "RouterLink",
+    "selector": "[router-link]",
+    "compileChildren": true,
+    "hostProperties": {},
+    "hostListeners": {
+      "^click": "onClick()"
+    },
+    "hostActions": {},
+    "hostAttributes": {},
+    "properties": [
+      "route: routerLink",
+      "params: routerParams"
+    ],
+    "readAttributes": [],
+    "type": 0,
+    "exportAs": null,
+    "callOnDestroy": false,
+    "callOnCheck": false,
+    "callOnInit": false,
+    "callOnChange": false,
+    "callOnAllChangesDone": true,
+    "events": [],
+    "changeDetection": null,
+    "version": 1
+  }
+}

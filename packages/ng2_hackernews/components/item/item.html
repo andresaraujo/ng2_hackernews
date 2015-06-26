@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="packages/ng2_hackernews/components/item/item_page.css">
+
+<div class="itemDetail">
+    <hn-item [item-id]="itemId" top-level="true"></hn-item>
+
+    <div class="itemDetail-item" *ng-for="#childId of childrenIds"><hn-item [item-id]="childId"></hn-item></div>
+</div>

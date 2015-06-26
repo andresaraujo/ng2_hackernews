@@ -1,0 +1,69 @@
+{
+  "NgSwitch": {
+    "id": "NgSwitch",
+    "selector": "[ng-switch]",
+    "compileChildren": true,
+    "hostProperties": {},
+    "hostListeners": {},
+    "hostActions": {},
+    "hostAttributes": {},
+    "properties": [
+      "ngSwitch"
+    ],
+    "readAttributes": [],
+    "type": 0,
+    "exportAs": null,
+    "callOnDestroy": false,
+    "callOnCheck": false,
+    "callOnInit": false,
+    "callOnChange": false,
+    "callOnAllChangesDone": false,
+    "events": [],
+    "changeDetection": null,
+    "version": 1
+  },
+  "NgSwitchWhen": {
+    "id": "NgSwitchWhen",
+    "selector": "[ng-switch-when]",
+    "compileChildren": true,
+    "hostProperties": {},
+    "hostListeners": {},
+    "hostActions": {},
+    "hostAttributes": {},
+    "properties": [
+      "ngSwitchWhen"
+    ],
+    "readAttributes": [],
+    "type": 0,
+    "exportAs": null,
+    "callOnDestroy": false,
+    "callOnCheck": false,
+    "callOnInit": false,
+    "callOnChange": false,
+    "callOnAllChangesDone": false,
+    "events": [],
+    "changeDetection": null,
+    "version": 1
+  },
+  "NgSwitchDefault": {
+    "id": "NgSwitchDefault",
+    "selector": "[ng-switch-default]",
+    "compileChildren": true,
+    "hostProperties": {},
+    "hostListeners": {},
+    "hostActions": {},
+    "hostAttributes": {},
+    "properties": [],
+    "readAttributes": [],
+    "type": 0,
+    "exportAs": null,
+    "callOnDestroy": false,
+    "callOnCheck": false,
+    "callOnInit": false,
+    "callOnChange": false,
+    "callOnAllChangesDone": false,
+    "events": [],
+    "changeDetection": null,
+    "version": 1
+  }
+}
