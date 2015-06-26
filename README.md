@@ -13,8 +13,10 @@ It will be updated to work with the most recent Angular 2 version.
 `pub serve`
 #### open http://localhost:8080/
 
-## Issues
-- Its seems that Dart2Js is failing with the current alpha. but you can test it on 
-[Dartium](https://www.dartlang.org/tools/dartium/)
+## [Live Demo](https://andresaraujo.github.io/)
 
-- Router migration is work in progress, seems to be partially broken as of alpha 27 ([#1950](https://github.com/angular/angular/issues/1950))
+## Issues
+
+- Unable to make it work with Angular transformer so big js files for now ( ︶︿︶)
+
+- Router migration is work in progress, seems to be partially broken as of alpha 28 ([#1950](https://github.com/angular/angular/issues/1950))
