@@ -36,11 +36,12 @@ class HNItem {
   int type = 0;
   String timeAgo;
 
-  HNItem(this.hnApi, this.router);
+  HNItem(this.hnApi, this.router) {
+    this.fetchData();
+  }
 
   set newItemId(itemId) {
     this.itemId = itemId.toString();
-    this.fetchData();
   }
 
   set newLoadChildren(loadChildren) {

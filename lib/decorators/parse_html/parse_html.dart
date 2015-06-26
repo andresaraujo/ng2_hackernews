@@ -11,7 +11,7 @@ class ParseHtml {
   ParseHtml(this.ref);
 
   onAllChangesDone() {
-    dom.Element element = ref.domElement;
+    dom.Element element = ref.nativeElement;
     String raw = element.text;
     element.text = "";
     element.appendHtml(parse(raw).outerHtml);
