@@ -26,36 +26,39 @@ final fuzzyTime = new TimeAgo();
   RouterLink
 ])
 class HNItem {
-  HNApi hnApi;
-  Router router;
+  HNApi _hnApi;
+  Router _router; //will be used when router is usable
+  String _itemId;
+
   bool loadChildren = true;
   bool topLevel = false;
-  String itemId;
   var data;
   bool collapsed = false;
   int type = 0;
   String timeAgo;
 
-  HNItem(this.hnApi, this.router) {
-    this.fetchData();
+  HNItem(this._hnApi, this._router) {
+    _fetchData();
   }
 
   set newItemId(itemId) {
-    this.itemId = itemId.toString();
+    _itemId = itemId.toString();
   }
 
   set newLoadChildren(loadChildren) {
-    this.loadChildren = loadChildren == true;
+    this.loadChildren = loadChildren;
   }
 
   set newTopLevel(topLevel) {
-    this.topLevel = topLevel == true;
+    this.topLevel = topLevel;
   }
 
-  fetchData() async {
-    data = await hnApi.fetchItem(this.itemId);
-    type = itemMap[data['type']];
-    timeAgo = fuzzyTime.timeAgo(data['time'] * 1000);
+  _fetchData() async {
+    data = await _hnApi.fetchItem(_itemId);
+    if(data != null) {
+      type = itemMap[data['type']];
+      timeAgo = fuzzyTime.timeAgo(data['time'] * 1000);
+    }
   }
 
   domainPipe(String url) {
