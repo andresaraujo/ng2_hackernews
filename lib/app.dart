@@ -8,7 +8,7 @@ import 'components/home/home.dart';
 import 'components/item/item.dart';
 import 'components/user_page/user_page.dart';
 
-@Component(selector: 'app', appInjector: const [r.Router])
+@Component(selector: 'app', viewInjector: const [r.Router])
 @View(
     templateUrl: 'packages/ng2_hackernews/app.html',
     directives: const [NgIf, NgFor, RouterOutlet, UserPage, ItemPage, Home])

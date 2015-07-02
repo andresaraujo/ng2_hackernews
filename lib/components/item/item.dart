@@ -5,7 +5,7 @@ import '../../services/hn_api.dart';
 import '../../services/router.dart' as r;
 import '../hn_item/hn_item.dart';
 
-@Component(selector: 'page-item', appInjector: const [HNApi])
+@Component(selector: 'page-item', viewInjector: const [HNApi])
 @View(
     templateUrl: 'packages/ng2_hackernews/components/item/item.html',
     directives: const [NgFor, HNItem])
