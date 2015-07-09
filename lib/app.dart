@@ -10,7 +10,7 @@ import 'components/user_page/user_page.dart';
 
 @Component(selector: 'app', viewInjector: const [r.Router])
 @View(
-    templateUrl: 'packages/ng2_hackernews/app.html',
+    templateUrl: 'package:ng2_hackernews/app.html',
     directives: const [NgIf, NgFor, RouterOutlet, UserPage, ItemPage, Home])
 @RouteConfig(const [
   const {'path': '/user/:id', 'component': UserPage, 'as': 'user'},

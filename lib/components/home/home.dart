@@ -6,7 +6,7 @@ import '../hn_item/hn_item.dart';
 
 @Component(selector: 'home-page', viewInjector: const [HNApi])
 @View(
-    templateUrl: "packages/ng2_hackernews/components/home/home.html",
+    templateUrl: "package:ng2_hackernews/components/home/home.html",
     directives: const [NgFor, HNItem])
 class Home {
   HNApi api;

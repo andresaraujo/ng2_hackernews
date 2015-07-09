@@ -11,7 +11,7 @@ final fuzzyTime = new TimeAgo();
 
 @Component(selector: 'page-user', viewInjector: const [HNApi])
 @View(
-    templateUrl: 'packages/ng2_hackernews/components/user_page/user_page.html',
+    templateUrl: 'package:ng2_hackernews/components/user_page/user_page.html',
     directives: const [NgFor, NgIf, HNItem, ParseHtml])
 class UserPage {
   HNApi api;

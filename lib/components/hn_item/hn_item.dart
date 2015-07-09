@@ -14,7 +14,7 @@ final fuzzyTime = new TimeAgo();
     viewInjector: const [HNApi],
     properties: const ['newItemId: item-id', 'newLoadChildren : load-children', 'newTopLevel : top-level'])
 @View(
-    templateUrl: 'packages/ng2_hackernews/components/hn_item/hn_item.html',
+    templateUrl: 'package:ng2_hackernews/components/hn_item/hn_item.html',
     directives: const [
   NgFor,
   NgIf,
