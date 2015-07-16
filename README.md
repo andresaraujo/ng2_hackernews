@@ -19,4 +19,4 @@ It will be updated to work with the most recent Angular 2 version.
 
 - Unable to make it work with Angular transformer so big js files for now ( ︶︿︶)
 
-- Router migration is work in progress, seems to be partially broken as of alpha 28 ([#1950](https://github.com/angular/angular/issues/1950))
+- Router migration is work in progress, seems to be partially broken as of alpha 31

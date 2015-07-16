@@ -4,7 +4,7 @@ import 'dart:html' as dom;
 import 'package:angular2/angular2.dart';
 import 'package:html/parser.dart' show parse;
 
-@Directive(selector: '[parsehtml]', lifecycle: const [onAllChangesDone])
+@Directive(selector: '[parsehtml]', lifecycle: const [LifecycleEvent.onAllChangesDone])
 class ParseHtml {
   ElementRef ref;
 
