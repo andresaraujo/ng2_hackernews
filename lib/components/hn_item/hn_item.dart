@@ -1,10 +1,10 @@
 library hacker_news.components.hnitem;
 
 import 'package:angular2/angular2.dart';
-import 'package:angular2/router.dart' show Router, RouterLink;
+import 'package:angular2/router.dart' show RouterLink;
 import 'package:timeago/timeago.dart';
-import '../../services/hn_api.dart';
-import '../../decorators/parse_html/parse_html.dart';
+import 'package:ng2_hackernews/services/hn_api.dart';
+import 'package:ng2_hackernews/decorators/parse_html/parse_html.dart';
 
 const itemMap = const {'comment': 1, 'job': 2, 'poll': 3, 'story': 4};
 final fuzzyTime = new TimeAgo();
@@ -12,7 +12,9 @@ final fuzzyTime = new TimeAgo();
 @Component(
     selector: 'hn-item',
     viewInjector: const [HNApi],
-    properties: const ['newItemId: item-id', 'newLoadChildren : load-children', 'newTopLevel : top-level'])
+    properties: const ['newItemId: item-id', 'newLoadChildren : load-children', 'newTopLevel : top-level'],
+    lifecycle: const [LifecycleEvent.onInit]
+)
 @View(
     templateUrl: 'package:ng2_hackernews/components/hn_item/hn_item.html',
     directives: const [
@@ -27,7 +29,6 @@ final fuzzyTime = new TimeAgo();
 ])
 class HNItem {
   HNApi _hnApi;
-  Router _router; //will be used when router is usable
   String _itemId;
 
   bool loadChildren = true;
@@ -37,7 +38,10 @@ class HNItem {
   int type = 0;
   String timeAgo;
 
-  HNItem(this._hnApi, this._router) {
+  HNItem(this._hnApi) {
+  }
+
+  onInit() {
     _fetchData();
   }
 
@@ -69,10 +73,10 @@ class HNItem {
     return domain ? domain.replaceFirst('www.', '') : domain;
   }
   urlForUser(id) {
-    return "index.html?userId=${id}";
+    return "#/user/${id}";
   }
   urlForItem(id) {
     //TODO: switch to router-link, <a href="item" router-link="item" [router-params]="{ 'id': data['id']}">link</a>
-    return "index.html?itemId=${id}";
+    return "#/item/${id}";
   }
 }

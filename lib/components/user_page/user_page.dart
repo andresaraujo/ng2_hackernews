@@ -1,11 +1,11 @@
 library hacker_news.components.user_page;
 
 import 'package:angular2/angular2.dart';
+import 'package:angular2/router.dart';
 import 'package:timeago/timeago.dart';
-import '../hn_item/hn_item.dart';
-import '../../decorators/parse_html/parse_html.dart';
-import '../../services/hn_api.dart';
-import '../../services/router.dart';
+import 'package:ng2_hackernews/components/hn_item/hn_item.dart';
+import 'package:ng2_hackernews/decorators/parse_html/parse_html.dart';
+import 'package:ng2_hackernews/services/hn_api.dart';
 
 final fuzzyTime = new TimeAgo();
 
@@ -19,8 +19,8 @@ class UserPage {
   var data = {};
   String timeAgo;
 
-  UserPage(this.api, Router router) {
-    _fetchUser(router.userId);
+  UserPage(this.api, RouteParams routeParams) {
+    _fetchUser(routeParams.get("id"));
     this.showSubmissions = false;
   }
   _fetchUser(String userId) async {

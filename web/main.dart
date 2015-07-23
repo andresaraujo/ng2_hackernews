@@ -17,7 +17,11 @@ main() {
   // Temporarily needed.
   reflector.reflectionCapabilities = new ReflectionCapabilities();
 
-  bootstrap(App, [ bind(UrlResolver).toClass(DartUrlResolver), routerInjectables, bind(appBaseHrefToken).toValue('/my/app') ]);
+  bootstrap(App, [
+    bind(UrlResolver).toClass(DartUrlResolver),
+    routerInjectables,
+    bind(appBaseHrefToken).toValue('/'),
+    bind(LocationStrategy).toClass(HashLocationStrategy) ]);
 }
 
 
