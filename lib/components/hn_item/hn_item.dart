@@ -12,9 +12,12 @@ final fuzzyTime = new TimeAgo();
 @Component(
     selector: 'hn-item',
     viewInjector: const [HNApi],
-    properties: const ['newItemId: item-id', 'newLoadChildren : load-children', 'newTopLevel : top-level'],
-    lifecycle: const [LifecycleEvent.onInit]
-)
+    properties: const [
+  'newItemId: item-id',
+  'newLoadChildren : load-children',
+  'newTopLevel : top-level'
+],
+    lifecycle: const [LifecycleEvent.onInit])
 @View(
     templateUrl: 'package:ng2_hackernews/components/hn_item/hn_item.html',
     directives: const [
@@ -38,8 +41,7 @@ class HNItem {
   int type = 0;
   String timeAgo;
 
-  HNItem(this._hnApi) {
-  }
+  HNItem(this._hnApi) {}
 
   onInit() {
     _fetchData();
@@ -59,7 +61,7 @@ class HNItem {
 
   _fetchData() async {
     data = await _hnApi.fetchItem(_itemId);
-    if(data != null) {
+    if (data != null) {
       type = itemMap[data['type']];
       timeAgo = fuzzyTime.timeAgo(data['time'] * 1000);
     }
