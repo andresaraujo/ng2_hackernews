@@ -2,7 +2,9 @@ library hacker_news.services.hn_api;
 
 import 'dart:async';
 import 'package:firebase/firebase.dart';
+import 'package:angular2/di.dart';
 
+@Injectable()
 class HNApi {
   final fb = new Firebase('https://hacker-news.firebaseio.com/v0/');
 
