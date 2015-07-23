@@ -1,28 +1,26 @@
 {
-  "RouterLink": {
-    "id": "RouterLink",
-    "selector": "[router-link]",
+  "NgForm": {
+    "id": "NgForm",
+    "selector": "form:not([ng-no-form]):not([ng-form-model]),ng-form,[ng-form]",
     "compileChildren": true,
-    "hostProperties": {
-      "attr.href": "visibleHref"
-    },
+    "hostProperties": {},
     "hostListeners": {
-      "^click": "onClick()"
+      "submit": "onSubmit()"
     },
     "hostActions": {},
     "hostAttributes": {},
-    "properties": [
-      "routeParams: routerLink"
-    ],
+    "properties": [],
     "readAttributes": [],
     "type": 0,
-    "exportAs": null,
+    "exportAs": "form",
     "callOnDestroy": false,
     "callOnCheck": false,
     "callOnInit": false,
     "callOnChange": false,
     "callOnAllChangesDone": false,
-    "events": [],
+    "events": [
+      "ngSubmit"
+    ],
     "changeDetection": null,
     "version": 1
   }

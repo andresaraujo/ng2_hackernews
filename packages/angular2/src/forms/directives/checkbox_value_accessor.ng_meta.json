@@ -7,10 +7,9 @@
       "class.ng-untouched": "ngClassUntouched",
       "class.ng-touched": "ngClassTouched",
       "class.ng-pristine": "ngClassPristine",
-      "checked": "checked",
       "class.ng-invalid": "ngClassInvalid",
-      "class.ng-valid": "ngClassValid",
-      "class.ng-dirty": "ngClassDirty"
+      "class.ng-dirty": "ngClassDirty",
+      "class.ng-valid": "ngClassValid"
     },
     "hostListeners": {
       "change": "onChange($event.target.checked)",

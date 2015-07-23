@@ -62,8 +62,8 @@
     "changeDetection": null,
     "version": 1
   },
-  "PipeRegistry": {
-    "id": "PipeRegistry",
+  "Pipes": {
+    "id": "Pipes",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},

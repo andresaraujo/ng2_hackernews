@@ -24,15 +24,16 @@
     "id": "RouterLink",
     "selector": "[router-link]",
     "compileChildren": true,
-    "hostProperties": {},
+    "hostProperties": {
+      "attr.href": "visibleHref"
+    },
     "hostListeners": {
       "^click": "onClick()"
     },
     "hostActions": {},
     "hostAttributes": {},
     "properties": [
-      "route: routerLink",
-      "params: routerParams"
+      "routeParams: routerLink"
     ],
     "readAttributes": [],
     "type": 0,
@@ -41,8 +42,29 @@
     "callOnCheck": false,
     "callOnInit": false,
     "callOnChange": false,
-    "callOnAllChangesDone": true,
+    "callOnAllChangesDone": false,
     "events": [],
+    "changeDetection": null,
+    "version": 1
+  },
+  "RouteRegistry": {
+    "id": "RouteRegistry",
+    "selector": null,
+    "compileChildren": true,
+    "hostProperties": {},
+    "hostListeners": {},
+    "hostActions": {},
+    "hostAttributes": {},
+    "properties": null,
+    "readAttributes": null,
+    "type": null,
+    "exportAs": null,
+    "callOnDestroy": null,
+    "callOnCheck": null,
+    "callOnInit": null,
+    "callOnChange": null,
+    "callOnAllChangesDone": null,
+    "events": null,
     "changeDetection": null,
     "version": 1
   },
@@ -90,6 +112,27 @@
   },
   "Location": {
     "id": "Location",
+    "selector": null,
+    "compileChildren": true,
+    "hostProperties": {},
+    "hostListeners": {},
+    "hostActions": {},
+    "hostAttributes": {},
+    "properties": null,
+    "readAttributes": null,
+    "type": null,
+    "exportAs": null,
+    "callOnDestroy": null,
+    "callOnCheck": null,
+    "callOnInit": null,
+    "callOnChange": null,
+    "callOnAllChangesDone": null,
+    "events": null,
+    "changeDetection": null,
+    "version": 1
+  },
+  "Pipeline": {
+    "id": "Pipeline",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},

@@ -1,19 +1,13 @@
 {
-  "RouterLink": {
-    "id": "RouterLink",
-    "selector": "[router-link]",
+  "ParseHtml": {
+    "id": "ParseHtml",
+    "selector": "[parsehtml]",
     "compileChildren": true,
-    "hostProperties": {
-      "attr.href": "visibleHref"
-    },
-    "hostListeners": {
-      "^click": "onClick()"
-    },
+    "hostProperties": {},
+    "hostListeners": {},
     "hostActions": {},
     "hostAttributes": {},
-    "properties": [
-      "routeParams: routerLink"
-    ],
+    "properties": [],
     "readAttributes": [],
     "type": 0,
     "exportAs": null,
@@ -21,7 +15,7 @@
     "callOnCheck": false,
     "callOnInit": false,
     "callOnChange": false,
-    "callOnAllChangesDone": false,
+    "callOnAllChangesDone": true,
     "events": [],
     "changeDetection": null,
     "version": 1

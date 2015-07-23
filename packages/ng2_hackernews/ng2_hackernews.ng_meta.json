@@ -1,21 +1,15 @@
 {
-  "RouterLink": {
-    "id": "RouterLink",
-    "selector": "[router-link]",
+  "App": {
+    "id": "App",
+    "selector": "app",
     "compileChildren": true,
-    "hostProperties": {
-      "attr.href": "visibleHref"
-    },
-    "hostListeners": {
-      "^click": "onClick()"
-    },
+    "hostProperties": {},
+    "hostListeners": {},
     "hostActions": {},
     "hostAttributes": {},
-    "properties": [
-      "routeParams: routerLink"
-    ],
+    "properties": [],
     "readAttributes": [],
-    "type": 0,
+    "type": 1,
     "exportAs": null,
     "callOnDestroy": false,
     "callOnCheck": false,

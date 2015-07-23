@@ -1,6 +1,6 @@
 {
-  "AppRootUrl": {
-    "id": "AppRootUrl",
+  "MockBackend": {
+    "id": "MockBackend",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},
@@ -20,8 +20,8 @@
     "changeDetection": null,
     "version": 1
   },
-  "UrlResolver": {
-    "id": "UrlResolver",
+  "BaseRequestOptions": {
+    "id": "BaseRequestOptions",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},
@@ -41,8 +41,8 @@
     "changeDetection": null,
     "version": 1
   },
-  "ComponentUrlMapper": {
-    "id": "ComponentUrlMapper",
+  "BaseResponseOptions": {
+    "id": "BaseResponseOptions",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},
@@ -62,8 +62,8 @@
     "changeDetection": null,
     "version": 1
   },
-  "DirectiveResolver": {
-    "id": "DirectiveResolver",
+  "XHRBackend": {
+    "id": "XHRBackend",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},
@@ -83,8 +83,8 @@
     "changeDetection": null,
     "version": 1
   },
-  "CompilerCache": {
-    "id": "CompilerCache",
+  "JSONPBackend": {
+    "id": "JSONPBackend",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},
@@ -104,8 +104,8 @@
     "changeDetection": null,
     "version": 1
   },
-  "Compiler": {
-    "id": "Compiler",
+  "Http": {
+    "id": "Http",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},
@@ -125,29 +125,8 @@
     "changeDetection": null,
     "version": 1
   },
-  "AppViewManager": {
-    "id": "AppViewManager",
-    "selector": null,
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {},
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": null,
-    "readAttributes": null,
-    "type": null,
-    "exportAs": null,
-    "callOnDestroy": null,
-    "callOnCheck": null,
-    "callOnInit": null,
-    "callOnChange": null,
-    "callOnAllChangesDone": null,
-    "events": null,
-    "changeDetection": null,
-    "version": 1
-  },
-  "DynamicComponentLoader": {
-    "id": "DynamicComponentLoader",
+  "Jsonp": {
+    "id": "Jsonp",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},

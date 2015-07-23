@@ -89,6 +89,29 @@
     "changeDetection": null,
     "version": 1
   },
+  "NgStyle": {
+    "id": "NgStyle",
+    "selector": "[ng-style]",
+    "compileChildren": true,
+    "hostProperties": {},
+    "hostListeners": {},
+    "hostActions": {},
+    "hostAttributes": {},
+    "properties": [
+      "rawStyle: ng-style"
+    ],
+    "readAttributes": [],
+    "type": 0,
+    "exportAs": null,
+    "callOnDestroy": false,
+    "callOnCheck": true,
+    "callOnInit": false,
+    "callOnChange": false,
+    "callOnAllChangesDone": false,
+    "events": [],
+    "changeDetection": null,
+    "version": 1
+  },
   "NgSwitch": {
     "id": "NgSwitch",
     "selector": "[ng-switch]",

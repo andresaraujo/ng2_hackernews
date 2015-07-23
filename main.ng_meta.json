@@ -1,6 +1,6 @@
 {
-  "TestBed": {
-    "id": "TestBed",
+  "DartUrlResolver": {
+    "id": "DartUrlResolver",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},

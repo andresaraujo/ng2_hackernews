@@ -1,25 +1,23 @@
 {
-  "RouterLink": {
-    "id": "RouterLink",
-    "selector": "[router-link]",
+  "HNItem": {
+    "id": "HNItem",
+    "selector": "hn-item",
     "compileChildren": true,
-    "hostProperties": {
-      "attr.href": "visibleHref"
-    },
-    "hostListeners": {
-      "^click": "onClick()"
-    },
+    "hostProperties": {},
+    "hostListeners": {},
     "hostActions": {},
     "hostAttributes": {},
     "properties": [
-      "routeParams: routerLink"
+      "newItemId: item-id",
+      "newLoadChildren : load-children",
+      "newTopLevel : top-level"
     ],
     "readAttributes": [],
-    "type": 0,
+    "type": 1,
     "exportAs": null,
     "callOnDestroy": false,
     "callOnCheck": false,
-    "callOnInit": false,
+    "callOnInit": true,
     "callOnChange": false,
     "callOnAllChangesDone": false,
     "events": [],

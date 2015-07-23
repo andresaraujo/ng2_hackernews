@@ -30,8 +30,7 @@
       "class.ng-pristine": "ngClassPristine",
       "class.ng-invalid": "ngClassInvalid",
       "class.ng-valid": "ngClassValid",
-      "class.ng-dirty": "ngClassDirty",
-      "value": "value"
+      "class.ng-dirty": "ngClassDirty"
     },
     "hostListeners": {
       "change": "onChange($event.target.value)",

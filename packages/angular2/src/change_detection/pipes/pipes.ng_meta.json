@@ -1,6 +1,6 @@
 {
-  "PipeRegistry": {
-    "id": "PipeRegistry",
+  "Pipes": {
+    "id": "Pipes",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},

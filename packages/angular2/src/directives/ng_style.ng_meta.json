@@ -1,24 +1,20 @@
 {
-  "RouterLink": {
-    "id": "RouterLink",
-    "selector": "[router-link]",
+  "NgStyle": {
+    "id": "NgStyle",
+    "selector": "[ng-style]",
     "compileChildren": true,
-    "hostProperties": {
-      "attr.href": "visibleHref"
-    },
-    "hostListeners": {
-      "^click": "onClick()"
-    },
+    "hostProperties": {},
+    "hostListeners": {},
     "hostActions": {},
     "hostAttributes": {},
     "properties": [
-      "routeParams: routerLink"
+      "rawStyle: ng-style"
     ],
     "readAttributes": [],
     "type": 0,
     "exportAs": null,
     "callOnDestroy": false,
-    "callOnCheck": false,
+    "callOnCheck": true,
     "callOnInit": false,
     "callOnChange": false,
     "callOnAllChangesDone": false,

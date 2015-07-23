@@ -1,6 +1,6 @@
 {
-  "TestComponentBuilder": {
-    "id": "TestComponentBuilder",
+  "Http": {
+    "id": "Http",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},
@@ -20,8 +20,8 @@
     "changeDetection": null,
     "version": 1
   },
-  "DebugElementViewListener": {
-    "id": "DebugElementViewListener",
+  "Jsonp": {
+    "id": "Jsonp",
     "selector": null,
     "compileChildren": true,
     "hostProperties": {},
