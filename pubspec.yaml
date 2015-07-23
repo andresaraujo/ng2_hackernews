@@ -8,9 +8,7 @@ environment:
   sdk: '>=1.0.0 <2.0.0'
 dependencies:
   firebase: ">=0.6.0 <0.7.0"
-#  angular2: "2.0.0-alpha.31"
-  angular2:
-     git: git://github.com/andresaraujo/ng2_dart_snapshot.git
+  angular2: "2.0.0-alpha.32"
   timeago: any
   less_dart: any
   browser: any
