@@ -15,5 +15,5 @@ dependencies:
   html: any
 transformers:
   - less_dart
-  - angular2:
-      entry_points: web/main.dart
+#  - angular2:
+#      entry_points: web/main.dart

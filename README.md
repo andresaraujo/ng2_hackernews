@@ -14,3 +14,6 @@ It will be updated to work with the most recent Angular 2 version.
 #### open http://localhost:8080/
 
 ## [Live Demo](https://andresaraujo.github.io/ng2_hackernews)
+
+
+Note: Transformer is disabled, router-link seems to be the problem

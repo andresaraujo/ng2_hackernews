@@ -15,9 +15,9 @@
           <span class="u-pointer" (click)="collapsed = !collapsed" *ng-if="!topLevel">
             [{{collapsed ? '+' : '-'}}]
           </span>
-                    <a [href]="urlForUser(data['by'])" class="hnItem-author">{{data['by']}}</a>
+                    <a [router-link]="['/user', {'id': data['by']}]">{{data['by']}}</a>
                     <span>{{timeAgo}}</span> |
-                    <a [href]="urlForItem(data['id'])">link</a>
+                    <a [router-link]="['/item', {'id': data['id']}]">link</a>
                 </header>
                 <section class="hnItem--coment-content" [hidden]="data == null || collapsed == true">
                     <span parsehtml>{{data['text']}}</span>
@@ -49,9 +49,9 @@
                 </header>
                 <section [hidden]="data == null">
                     <span>{{data['score']}} points</span> by
-                    <a [href]="urlForUser(data['by'])">{{data['by']}}</a>
+                    <a [router-link]="['/user', {'id': data['by']}]">{{data['by']}}</a>
                     <span>{{timeAgo}}</span> |
-                    <a [href]="urlForItem(data['id'])">comments</a>
+                    <a [router-link]="['/item', {'id': data['id']}]">comments</a>
                 </section>
             </div>
         </template>
@@ -64,9 +64,9 @@
                 </header>
                 <section [hidden]="data == null">
                     <span>{{data['score']}} points</span> by
-                    <a [href]="urlForUser(data['by'])">{{data['by']}}</a>
+                    <a [router-link]="['/user', {'id': data['by']}]">{{data['by']}}</a>
                     <span>{{timeAgo}}</span> |
-                    <a [href]="urlForItem(data['id'])">comments</a>
+                    <a [router-link]="['/item', {'id': data['id']}]">comments</a>
                 </section>
             </div>
         </template>

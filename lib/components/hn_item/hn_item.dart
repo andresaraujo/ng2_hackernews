@@ -1,7 +1,7 @@
 library hacker_news.components.hnitem;
 
-import 'package:angular2/angular2.dart';
-import 'package:angular2/router.dart' show RouterLink;
+import 'package:angular2/angular2.dart' show Component, View, LifecycleEvent, coreDirectives;
+import 'package:angular2/router.dart' show routerDirectives;
 import 'package:timeago/timeago.dart';
 import 'package:ng2_hackernews/services/hn_api.dart';
 import 'package:ng2_hackernews/decorators/parse_html/parse_html.dart';
@@ -21,14 +21,10 @@ final fuzzyTime = new TimeAgo();
 @View(
     templateUrl: 'package:ng2_hackernews/components/hn_item/hn_item.html',
     directives: const [
-  NgFor,
-  NgIf,
-  NgSwitch,
-  NgSwitchWhen,
-  NgSwitchDefault,
+  coreDirectives,
   HNItem,
   ParseHtml,
-  RouterLink
+  routerDirectives
 ])
 class HNItem {
   HNApi _hnApi;
@@ -64,6 +60,7 @@ class HNItem {
     if (data != null) {
       type = itemMap[data['type']];
       timeAgo = fuzzyTime.timeAgo(data['time'] * 1000);
+      data['by'] = data['type'] != null ? data['type'] : '';
     }
   }
 
@@ -73,12 +70,5 @@ class HNItem {
     }
     var domain = url.split('/')[2];
     return domain ? domain.replaceFirst('www.', '') : domain;
-  }
-  urlForUser(id) {
-    return "#/user/${id}";
-  }
-  urlForItem(id) {
-    //TODO: switch to router-link, <a href="item" router-link="item" [router-params]="{ 'id': data['id']}">link</a>
-    return "#/item/${id}";
   }
 }

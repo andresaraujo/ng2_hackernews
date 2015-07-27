@@ -19,8 +19,8 @@ import 'package:ng2_hackernews/components/user_page/user_page.dart';
 ])
 class App {
   Router router;
-  App(this.router) {
-    //rr.navigate('/item/9511504');
-    //rr.navigate('home');
+  App(this.router);
+  goHome() {
+    router.navigate("/home");
   }
 }
