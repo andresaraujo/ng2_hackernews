@@ -63,12 +63,4 @@ class HNItem {
       data['by'] = data['type'] != null ? data['type'] : '';
     }
   }
-
-  domainPipe(String url) {
-    if (url == null || url.isEmpty) {
-      return '';
-    }
-    var domain = url.split('/')[2];
-    return domain ? domain.replaceFirst('www.', '') : domain;
-  }
 }

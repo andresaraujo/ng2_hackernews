@@ -34,7 +34,7 @@
             <div class="hnItem--story">
                 <header>
                     <a class="hnItem-title" [href]="data['url']">{{data['title']}}</a>
-                    <span class="comhead" [hidden]="data['url'] != null">({{domainPipe(data['url'])}})</span>
+                    <span class="comhead" [hidden]="data['url'] == null">({{ data['url'] | domain}})</span>
                 </header>
                 <section [hidden]="data == null">
                     <span>{{timeAgo}}</span>
@@ -45,7 +45,7 @@
             <div class="hnItem--story">
                 <header>
                     <a class="hnItem-title" [href]="data['url']">{{data['title']}}</a>
-                    <span class="comhead" [hidden]="data['url'] != null">({{domainPipe(data['url'])}})</span>
+                    <span class="comhead" [hidden]="data['url'] == null">({{ data['url'] | domain }})</span>
                 </header>
                 <section [hidden]="data == null">
                     <span>{{data['score']}} points</span> by
@@ -60,7 +60,7 @@
             <div class="hnItem--story">
                 <header>
                     <a class="hnItem-title" [href]="data['url']">{{data['title']}}</a>
-                    <span class="comhead" [hidden]="data['url'] != null">({{domainPipe(data['url'])}})</span>
+                    <span class="comhead" [hidden]="data['url'] == null">({{ data['url'] | domain }})</span>
                 </header>
                 <section [hidden]="data == null">
                     <span>{{data['score']}} points</span> by

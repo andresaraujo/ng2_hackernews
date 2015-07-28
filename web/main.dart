@@ -11,17 +11,30 @@ import 'package:angular2/src/reflection/reflection_capabilities.dart'
     show ReflectionCapabilities;
 
 import 'package:ng2_hackernews/ng2_hackernews.dart';
+import 'package:ng2_hackernews/pipes/domain_pipe.dart';
 
 main() {
 
   // Temporarily needed.
   reflector.reflectionCapabilities = new ReflectionCapabilities();
 
+  var x = defaultPipes;
+
+
+
+  var pipeMap = {
+    'domain': [ new DomainPipe(), const NullPipeFactory()],
+    "iterableDiff": defaultPipes.config['iterableDiff'] //temporaly needed
+  };
+  Pipes pipes = new Pipes(pipeMap);
+
   bootstrap(App, [
     bind(UrlResolver).toClass(DartUrlResolver),
     routerInjectables,
     bind(appBaseHrefToken).toValue('/'),
-    bind(LocationStrategy).toClass(HashLocationStrategy) ]);
+    bind(LocationStrategy).toClass(HashLocationStrategy),
+    bind(Pipes).toValue(pipes)
+  ]);
 }
 
 
