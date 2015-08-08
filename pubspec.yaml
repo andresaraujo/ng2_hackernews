@@ -8,14 +8,14 @@ environment:
   sdk: '>=1.0.0 <2.0.0'
 dependencies:
   firebase: ">=0.6.0 <0.7.0"
-#  angular2: "2.0.0-alpha.33"
-  angular2:
-     git: git://github.com/andresaraujo/ng2_dart_snapshot.git
+  angular2: "2.0.0-alpha.34"
+#  angular2:
+#     git: git://github.com/andresaraujo/ng2_dart_snapshot.git
   timeago: any
   less_dart: any
   browser: any
   html: any
 transformers:
   - less_dart
-#  - angular2:
-#      entry_points: web/main.dart
+  - angular2:
+      entry_points: web/main.dart
