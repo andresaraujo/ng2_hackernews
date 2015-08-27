@@ -1,10 +1,11 @@
 library hacker_news.components.hnitem;
 
-import 'package:angular2/angular2.dart' show Component, View, LifecycleEvent, coreDirectives;
+import 'package:angular2/angular2.dart' show Component, View, LifecycleEvent, CORE_DIRECTIVES;
 import 'package:angular2/router.dart' show routerDirectives;
 import 'package:timeago/timeago.dart';
 import 'package:ng2_hackernews/services/hn_api.dart';
 import 'package:ng2_hackernews/decorators/parse_html/parse_html.dart';
+import 'package:ng2_hackernews/pipes/domain_pipe.dart' show DomainPipe;
 
 const itemMap = const {'comment': 1, 'job': 2, 'poll': 3, 'story': 4};
 final fuzzyTime = new TimeAgo();
@@ -17,15 +18,18 @@ final fuzzyTime = new TimeAgo();
   'newLoadChildren : load-children',
   'newTopLevel : top-level'
 ],
-    lifecycle: const [LifecycleEvent.onInit])
+    lifecycle: const [LifecycleEvent.onInit]
+)
 @View(
     templateUrl: 'package:ng2_hackernews/components/hn_item/hn_item.html',
     directives: const [
-  coreDirectives,
+  CORE_DIRECTIVES,
   HNItem,
   ParseHtml,
   routerDirectives
-])
+],
+pipes: const [DomainPipe]
+)
 class HNItem {
   HNApi _hnApi;
   String _itemId;
@@ -60,7 +64,7 @@ class HNItem {
     if (data != null) {
       type = itemMap[data['type']];
       timeAgo = fuzzyTime.timeAgo(data['time'] * 1000);
-      data['by'] = data['type'] != null ? data['type'] : '';
+      data['type'] = data['type'] != null ? data['type'] : '';
     }
   }
 }

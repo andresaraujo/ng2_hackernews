@@ -1,4 +1,5 @@
-import 'package:angular2/angular2.dart' show Pipe, PipeFactory, ChangeDetectorRef;
+import 'package:angular2/angular2.dart' show Pipe, PipeTransform, ChangeDetectorRef;
+import 'package:angular2/di.dart';
 import 'package:timeago/timeago.dart';
 
 final fuzzyTime = new TimeAgo();
@@ -13,7 +14,8 @@ final fuzzyTime = new TimeAgo();
  *   selector: "timeago-example"
  * )
  * @View(
- *   template: "posted: {{ time | timeago }}"
+ *   template: "posted: {{ time | timeago }}",
+ *   pipes: const [TimeAgoPipe]
  * )
  * class TimeAgoExample {
  *   String millisStr = "${new DateTime.now().millisecondsSinceEpoch - (15 * 60 * 1000)}";
@@ -21,7 +23,9 @@ final fuzzyTime = new TimeAgo();
  *
  * ```
  */
-class TimeAgoPipe implements Pipe, PipeFactory {
+@Pipe(name: 'timeago')
+@Injectable()
+class TimeAgoPipe implements PipeTransform {
   String _latestValue = null;
   String _latestResult = null;
   bool supports(dynamic str) {

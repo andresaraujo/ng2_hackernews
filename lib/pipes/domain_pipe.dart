@@ -1,4 +1,5 @@
-import 'package:angular2/angular2.dart' show Pipe, PipeFactory, ChangeDetectorRef;
+import 'package:angular2/angular2.dart' show Pipe, PipeTransform, ChangeDetectorRef;
+import 'package:angular2/di.dart';
 
 /**
  * Transforms a string that represents the url to show only the domain.
@@ -10,14 +11,17 @@ import 'package:angular2/angular2.dart' show Pipe, PipeFactory, ChangeDetectorRe
  *   selector: "domain-example"
  * )
  * @View(
- *   template: "domain: {{ 'http://www.google.com/accounts/recovery' | domain }}" // will be transformed to 'google.com'
+ *   template: "domain: {{ 'http://www.google.com/accounts/recovery' | domain }}" // will be transformed to 'google.com',
+ *   pipes: const [DomainPipe]
  * )
  * class DomainExample {
  * }
  *
  * ```
  */
-class DomainPipe implements Pipe, PipeFactory {
+@Pipe(name: 'domain')
+@Injectable()
+class DomainPipe implements PipeTransform {
   bool supports(dynamic str) {
     return str == null || str is String || str is List;
   }

@@ -19,7 +19,7 @@ class ItemPage {
     _fetchItem();
   }
   _fetchItem() async {
-    var data = await api.fetchItem(itemId);
+    var data = await api.fetchItem("$itemId");
     if (data != null) {
       childrenIds = data['kids'];
     }
