@@ -1,4 +1,5 @@
-import 'package:angular2/angular2.dart' show Pipe, PipeTransform, ChangeDetectorRef;
+import 'package:angular2/angular2.dart'
+    show Pipe, PipeTransform, ChangeDetectorRef;
 import 'package:angular2/di.dart' show Injectable;
 import 'package:timeago/timeago.dart' show TimeAgo;
 
@@ -31,10 +32,12 @@ class TimeAgoPipe implements PipeTransform {
   bool supports(dynamic str) {
     return str is String;
   }
+
   void onDestroy() {
     _latestValue = null;
     _latestResult = null;
   }
+
   String transform(String value, [List<dynamic> args = null]) {
     if (this._latestValue != value) {
       _latestValue = value;
@@ -44,8 +47,10 @@ class TimeAgoPipe implements PipeTransform {
       return _latestResult;
     }
   }
-  Pipe create(ChangeDetectorRef cdRef) {
+
+  create(ChangeDetectorRef cdRef) {
     return this;
   }
+
   TimeAgoPipe();
 }
