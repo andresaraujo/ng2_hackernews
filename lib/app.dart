@@ -1,11 +1,11 @@
 library ng2_hackernews.app;
 
-import 'package:angular2/angular2.dart';
-import 'package:angular2/router.dart';
+import 'package:angular2/angular2.dart' show Component, NgFor, NgIf, View;
+import 'package:angular2/router.dart' show Route, RouteConfig, Router, RouterOutlet;
 
-import 'package:ng2_hackernews/components/home/home.dart';
-import 'package:ng2_hackernews/components/item/item.dart';
-import 'package:ng2_hackernews/components/user_page/user_page.dart';
+import 'package:ng2_hackernews/components/home/home.dart' show Home;
+import 'package:ng2_hackernews/components/item/item.dart' show ItemPage;
+import 'package:ng2_hackernews/components/user_page/user_page.dart' show UserPage;
 
 @Component(selector: 'app')
 @View(

@@ -16,6 +16,7 @@ dependencies:
   browser: any
   html: any
 transformers:
-  - less_dart
+  - less_dart:
+      include_path: ../lib/components/
   - angular2:
       entry_points: web/main.dart

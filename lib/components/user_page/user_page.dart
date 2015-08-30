@@ -1,11 +1,11 @@
 library hacker_news.components.user_page;
 
-import 'package:angular2/angular2.dart';
-import 'package:angular2/router.dart';
-import 'package:timeago/timeago.dart';
-import 'package:ng2_hackernews/components/hn_item/hn_item.dart';
-import 'package:ng2_hackernews/decorators/parse_html/parse_html.dart';
-import 'package:ng2_hackernews/services/hn_api.dart';
+import 'package:angular2/angular2.dart' show Component, NgFor, NgIf, View;
+import 'package:angular2/router.dart' show RouteParams;
+import 'package:timeago/timeago.dart' show TimeAgo;
+import 'package:ng2_hackernews/components/hn_item/hn_item.dart' show HNItem;
+import 'package:ng2_hackernews/decorators/parse_html/parse_html.dart' show ParseHtml;
+import 'package:ng2_hackernews/services/hn_api.dart' show HNApi;
 
 final fuzzyTime = new TimeAgo();
 

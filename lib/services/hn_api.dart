@@ -53,7 +53,6 @@ class HNApi {
   }
 
   Firebase itemRef(itemId) {
-    print(">>>>>>>>>>$itemId");
     return fb.child('item/' + itemId);
   }
 

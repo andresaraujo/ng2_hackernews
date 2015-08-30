@@ -1,9 +1,9 @@
 library hacker_news.components.item;
 
-import 'package:angular2/angular2.dart';
-import 'package:angular2/router.dart';
-import 'package:ng2_hackernews/services/hn_api.dart';
-import 'package:ng2_hackernews/components/hn_item/hn_item.dart';
+import 'package:angular2/angular2.dart' show Component, NgFor, View;
+import 'package:angular2/router.dart' show RouteParams;
+import 'package:ng2_hackernews/services/hn_api.dart' show HNApi;
+import 'package:ng2_hackernews/components/hn_item/hn_item.dart' show HNItem;
 
 @Component(selector: 'page-item', viewBindings: const [HNApi])
 @View(
