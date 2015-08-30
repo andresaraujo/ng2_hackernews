@@ -20,9 +20,9 @@ import 'package:ng2_hackernews/components/user_page/user_page.dart'
   const Route(path: '/', component: Home)
 ])
 class App {
-  Router router;
-  App(this.router);
+  Router _router;
+  App(this._router);
   goHome() {
-    router.navigate("/home");
+    _router.navigate("/home");
   }
 }
