@@ -27,7 +27,7 @@ class DomainPipe implements PipeTransform {
   }
   void onDestroy() {}
   String transform(String value, [List<dynamic> args = null]) {
-    if (value.isEmpty) {
+    if (value == null || value.isEmpty) {
       return value;
     }
     List<String> parts = value.split('/');
