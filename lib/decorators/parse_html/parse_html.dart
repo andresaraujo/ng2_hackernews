@@ -16,6 +16,6 @@ class ParseHtml {
     dom.Element element = ref.nativeElement;
     String raw = element.text;
     element.text = "";
-    element.appendHtml(parse(raw).outerHtml);
+    element.setInnerHtml(parse(raw).outerHtml);
   }
 }
