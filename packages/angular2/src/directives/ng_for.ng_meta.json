@@ -1,25 +1,28 @@
 {
   "NgFor": {
-    "id": "NgFor",
-    "selector": "[ng-for][ng-for-of]",
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {},
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [
-      "ngForOf"
-    ],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": null,
-    "callOnDestroy": false,
-    "callOnCheck": true,
-    "callOnInit": false,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "NgFor",
+      "selector": "[ng-for][ng-for-of]",
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [
+        "ngForOf"
+      ],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": null,
+      "callOnDestroy": false,
+      "callOnCheck": true,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [],
+      "changeDetection": null,
+      "version": 1
+    }
   }
 }

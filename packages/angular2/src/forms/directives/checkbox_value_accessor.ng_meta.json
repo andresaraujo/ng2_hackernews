@@ -1,33 +1,36 @@
 {
   "CheckboxControlValueAccessor": {
-    "id": "CheckboxControlValueAccessor",
-    "selector": "input[type=checkbox][ng-control],input[type=checkbox][ng-form-control],input[type=checkbox][ng-model]",
-    "compileChildren": true,
-    "hostProperties": {
-      "class.ng-untouched": "ngClassUntouched",
-      "class.ng-touched": "ngClassTouched",
-      "class.ng-pristine": "ngClassPristine",
-      "class.ng-invalid": "ngClassInvalid",
-      "class.ng-dirty": "ngClassDirty",
-      "class.ng-valid": "ngClassValid"
-    },
-    "hostListeners": {
-      "change": "onChange($event.target.checked)",
-      "blur": "onTouched()"
-    },
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": null,
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "CheckboxControlValueAccessor",
+      "selector": "input[type=checkbox][ng-control],input[type=checkbox][ng-form-control],input[type=checkbox][ng-model]",
+      "compileChildren": true,
+      "hostProperties": {
+        "class.ng-untouched": "ngClassUntouched",
+        "class.ng-touched": "ngClassTouched",
+        "class.ng-pristine": "ngClassPristine",
+        "class.ng-invalid": "ngClassInvalid",
+        "class.ng-dirty": "ngClassDirty",
+        "class.ng-valid": "ngClassValid"
+      },
+      "hostListeners": {
+        "change": "onChange($event.target.checked)",
+        "blur": "onTouched()"
+      },
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": null,
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [],
+      "changeDetection": null,
+      "version": 1
+    }
   }
 }

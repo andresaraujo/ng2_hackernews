@@ -1,0 +1,29 @@
+{
+  "NgClass": {
+    "kind": "type",
+    "value": {
+      "id": "NgClass",
+      "selector": "[ng-class]",
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [
+        "rawClass: ng-class",
+        "initialClasses: class"
+      ],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": null,
+      "callOnDestroy": true,
+      "callOnCheck": true,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [],
+      "changeDetection": null,
+      "version": 1
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "FORM_DIRECTIVES": {
+    "kind": "alias",
+    "value": [
+      "NgControlName",
+      "NgControlGroup",
+      "NgFormControl",
+      "NgModel",
+      "NgFormModel",
+      "NgForm",
+      "NgSelectOption",
+      "DefaultValueAccessor",
+      "CheckboxControlValueAccessor",
+      "SelectControlValueAccessor",
+      "NgRequiredValidator"
+    ]
+  }
+}

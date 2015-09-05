@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="packages/ng2_hackernews/components/hn_item/hn_item.css">
-
 <div class="hnItem-loading spinner" *ng-if="data == null">
     <div class="rect1"></div>
     <div class="rect2"></div>
@@ -34,7 +32,7 @@
             <div class="hnItem--story">
                 <header>
                     <a class="hnItem-title" [href]="data['url']">{{data['title']}}</a>
-                    <span class="comhead" [hidden]="data['url'] != null">({{domainPipe(data['url'])}})</span>
+                    <span class="comhead" [hidden]="data['url'] == null">({{ data['url'] | domain}})</span>
                 </header>
                 <section [hidden]="data == null">
                     <span>{{timeAgo}}</span>
@@ -45,7 +43,7 @@
             <div class="hnItem--story">
                 <header>
                     <a class="hnItem-title" [href]="data['url']">{{data['title']}}</a>
-                    <span class="comhead" [hidden]="data['url'] != null">({{domainPipe(data['url'])}})</span>
+                    <span class="comhead" [hidden]="data['url'] == null">({{ data['url'] | domain }})</span>
                 </header>
                 <section [hidden]="data == null">
                     <span>{{data['score']}} points</span> by
@@ -60,7 +58,7 @@
             <div class="hnItem--story">
                 <header>
                     <a class="hnItem-title" [href]="data['url']">{{data['title']}}</a>
-                    <span class="comhead" [hidden]="data['url'] != null">({{domainPipe(data['url'])}})</span>
+                    <span class="comhead" [hidden]="data['url'] == null">({{ data['url'] | domain }})</span>
                 </header>
                 <section [hidden]="data == null">
                     <span>{{data['score']}} points</span> by

@@ -1,29 +1,32 @@
 {
   "RouterLink": {
-    "id": "RouterLink",
-    "selector": "[router-link]",
-    "compileChildren": true,
-    "hostProperties": {
-      "attr.href": "visibleHref"
-    },
-    "hostListeners": {
-      "^click": "onClick()"
-    },
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [
-      "routeParams: routerLink"
-    ],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": null,
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "RouterLink",
+      "selector": "[router-link]",
+      "compileChildren": true,
+      "hostProperties": {
+        "attr.href": "visibleHref"
+      },
+      "hostListeners": {
+        "^click": "onClick()"
+      },
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [
+        "routeParams: routerLink"
+      ],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": null,
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [],
+      "changeDetection": null,
+      "version": 1
+    }
   }
 }

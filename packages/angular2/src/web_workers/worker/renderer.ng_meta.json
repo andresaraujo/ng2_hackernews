@@ -1,0 +1,50 @@
+{
+  "WebWorkerCompiler": {
+    "kind": "type",
+    "value": {
+      "id": "WebWorkerCompiler",
+      "selector": null,
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": null,
+      "readAttributes": null,
+      "type": null,
+      "exportAs": null,
+      "callOnDestroy": null,
+      "callOnCheck": null,
+      "callOnInit": null,
+      "callOnChange": null,
+      "callOnAllChangesDone": null,
+      "events": null,
+      "changeDetection": null,
+      "version": 1
+    }
+  },
+  "WebWorkerRenderer": {
+    "kind": "type",
+    "value": {
+      "id": "WebWorkerRenderer",
+      "selector": null,
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": null,
+      "readAttributes": null,
+      "type": null,
+      "exportAs": null,
+      "callOnDestroy": null,
+      "callOnCheck": null,
+      "callOnInit": null,
+      "callOnChange": null,
+      "callOnAllChangesDone": null,
+      "events": null,
+      "changeDetection": null,
+      "version": 1
+    }
+  }
+}

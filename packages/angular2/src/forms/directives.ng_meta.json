@@ -1,291 +1,340 @@
 {
   "NgControlName": {
-    "id": "NgControlName",
-    "selector": "[ng-control]",
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {},
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [
-      "name: ngControl",
-      "model: ngModel"
-    ],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": "form",
-    "callOnDestroy": true,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": true,
-    "callOnAllChangesDone": false,
-    "events": [
-      "update: ngModel"
-    ],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "NgControlName",
+      "selector": "[ng-control]",
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [
+        "name: ngControl",
+        "model: ngModel"
+      ],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": "form",
+      "callOnDestroy": true,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": true,
+      "callOnAllChangesDone": false,
+      "events": [
+        "update: ngModel"
+      ],
+      "changeDetection": null,
+      "version": 1
+    }
   },
   "NgFormControl": {
-    "id": "NgFormControl",
-    "selector": "[ng-form-control]",
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {},
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [
-      "form: ngFormControl",
-      "model: ngModel"
-    ],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": "form",
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": true,
-    "callOnAllChangesDone": false,
-    "events": [
-      "update: ngModel"
-    ],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "NgFormControl",
+      "selector": "[ng-form-control]",
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [
+        "form: ngFormControl",
+        "model: ngModel"
+      ],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": "form",
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": true,
+      "callOnAllChangesDone": false,
+      "events": [
+        "update: ngModel"
+      ],
+      "changeDetection": null,
+      "version": 1
+    }
   },
   "NgModel": {
-    "id": "NgModel",
-    "selector": "[ng-model]:not([ng-control]):not([ng-form-control])",
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {},
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [
-      "model: ngModel"
-    ],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": "form",
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": true,
-    "callOnAllChangesDone": false,
-    "events": [
-      "update: ngModel"
-    ],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "NgModel",
+      "selector": "[ng-model]:not([ng-control]):not([ng-form-control])",
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [
+        "model: ngModel"
+      ],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": "form",
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": true,
+      "callOnAllChangesDone": false,
+      "events": [
+        "update: ngModel"
+      ],
+      "changeDetection": null,
+      "version": 1
+    }
   },
   "NgControlGroup": {
-    "id": "NgControlGroup",
-    "selector": "[ng-control-group]",
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {},
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [
-      "name: ng-control-group"
-    ],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": "form",
-    "callOnDestroy": true,
-    "callOnCheck": false,
-    "callOnInit": true,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "NgControlGroup",
+      "selector": "[ng-control-group]",
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [
+        "name: ng-control-group"
+      ],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": "form",
+      "callOnDestroy": true,
+      "callOnCheck": false,
+      "callOnInit": true,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [],
+      "changeDetection": null,
+      "version": 1
+    }
   },
   "NgFormModel": {
-    "id": "NgFormModel",
-    "selector": "[ng-form-model]",
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {
-      "submit": "onSubmit()"
-    },
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [
-      "form: ng-form-model"
-    ],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": "form",
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": true,
-    "callOnAllChangesDone": false,
-    "events": [
-      "ngSubmit"
-    ],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "NgFormModel",
+      "selector": "[ng-form-model]",
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {
+        "submit": "onSubmit()"
+      },
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [
+        "form: ng-form-model"
+      ],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": "form",
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": true,
+      "callOnAllChangesDone": false,
+      "events": [
+        "ngSubmit"
+      ],
+      "changeDetection": null,
+      "version": 1
+    }
   },
   "NgForm": {
-    "id": "NgForm",
-    "selector": "form:not([ng-no-form]):not([ng-form-model]),ng-form,[ng-form]",
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {
-      "submit": "onSubmit()"
-    },
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": "form",
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [
-      "ngSubmit"
-    ],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "NgForm",
+      "selector": "form:not([ng-no-form]):not([ng-form-model]),ng-form,[ng-form]",
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {
+        "submit": "onSubmit()"
+      },
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": "form",
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [
+        "ngSubmit"
+      ],
+      "changeDetection": null,
+      "version": 1
+    }
   },
   "DefaultValueAccessor": {
-    "id": "DefaultValueAccessor",
-    "selector": "input:not([type=checkbox])[ng-control],textarea[ng-control],input:not([type=checkbox])[ng-form-control],textarea[ng-form-control],input:not([type=checkbox])[ng-model],textarea[ng-model]",
-    "compileChildren": true,
-    "hostProperties": {
-      "class.ng-untouched": "ngClassUntouched",
-      "class.ng-touched": "ngClassTouched",
-      "class.ng-pristine": "ngClassPristine",
-      "class.ng-invalid": "ngClassInvalid",
-      "class.ng-valid": "ngClassValid",
-      "class.ng-dirty": "ngClassDirty"
-    },
-    "hostListeners": {
-      "change": "onChange($event.target.value)",
-      "input": "onChange($event.target.value)",
-      "blur": "onTouched()"
-    },
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": null,
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "DefaultValueAccessor",
+      "selector": "input:not([type=checkbox])[ng-control],textarea[ng-control],input:not([type=checkbox])[ng-form-control],textarea[ng-form-control],input:not([type=checkbox])[ng-model],textarea[ng-model]",
+      "compileChildren": true,
+      "hostProperties": {
+        "class.ng-untouched": "ngClassUntouched",
+        "class.ng-touched": "ngClassTouched",
+        "class.ng-pristine": "ngClassPristine",
+        "class.ng-invalid": "ngClassInvalid",
+        "class.ng-valid": "ngClassValid",
+        "class.ng-dirty": "ngClassDirty"
+      },
+      "hostListeners": {
+        "change": "onChange($event.target.value)",
+        "input": "onChange($event.target.value)",
+        "blur": "onTouched()"
+      },
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": null,
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [],
+      "changeDetection": null,
+      "version": 1
+    }
   },
   "CheckboxControlValueAccessor": {
-    "id": "CheckboxControlValueAccessor",
-    "selector": "input[type=checkbox][ng-control],input[type=checkbox][ng-form-control],input[type=checkbox][ng-model]",
-    "compileChildren": true,
-    "hostProperties": {
-      "class.ng-untouched": "ngClassUntouched",
-      "class.ng-touched": "ngClassTouched",
-      "class.ng-pristine": "ngClassPristine",
-      "class.ng-invalid": "ngClassInvalid",
-      "class.ng-dirty": "ngClassDirty",
-      "class.ng-valid": "ngClassValid"
-    },
-    "hostListeners": {
-      "change": "onChange($event.target.checked)",
-      "blur": "onTouched()"
-    },
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": null,
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "CheckboxControlValueAccessor",
+      "selector": "input[type=checkbox][ng-control],input[type=checkbox][ng-form-control],input[type=checkbox][ng-model]",
+      "compileChildren": true,
+      "hostProperties": {
+        "class.ng-untouched": "ngClassUntouched",
+        "class.ng-touched": "ngClassTouched",
+        "class.ng-pristine": "ngClassPristine",
+        "class.ng-invalid": "ngClassInvalid",
+        "class.ng-dirty": "ngClassDirty",
+        "class.ng-valid": "ngClassValid"
+      },
+      "hostListeners": {
+        "change": "onChange($event.target.checked)",
+        "blur": "onTouched()"
+      },
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": null,
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [],
+      "changeDetection": null,
+      "version": 1
+    }
   },
   "NgSelectOption": {
-    "id": "NgSelectOption",
-    "selector": "option",
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {},
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": null,
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "NgSelectOption",
+      "selector": "option",
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": null,
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [],
+      "changeDetection": null,
+      "version": 1
+    }
   },
   "SelectControlValueAccessor": {
-    "id": "SelectControlValueAccessor",
-    "selector": "select[ng-control],select[ng-form-control],select[ng-model]",
-    "compileChildren": true,
-    "hostProperties": {
-      "class.ng-untouched": "ngClassUntouched",
-      "class.ng-touched": "ngClassTouched",
-      "class.ng-pristine": "ngClassPristine",
-      "class.ng-invalid": "ngClassInvalid",
-      "class.ng-valid": "ngClassValid",
-      "class.ng-dirty": "ngClassDirty"
-    },
-    "hostListeners": {
-      "change": "onChange($event.target.value)",
-      "input": "onChange($event.target.value)",
-      "blur": "onTouched()"
-    },
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": null,
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "SelectControlValueAccessor",
+      "selector": "select[ng-control],select[ng-form-control],select[ng-model]",
+      "compileChildren": true,
+      "hostProperties": {
+        "class.ng-untouched": "ngClassUntouched",
+        "class.ng-touched": "ngClassTouched",
+        "class.ng-pristine": "ngClassPristine",
+        "class.ng-invalid": "ngClassInvalid",
+        "class.ng-valid": "ngClassValid",
+        "class.ng-dirty": "ngClassDirty"
+      },
+      "hostListeners": {
+        "change": "onChange($event.target.value)",
+        "input": "onChange($event.target.value)",
+        "blur": "onTouched()"
+      },
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": null,
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [],
+      "changeDetection": null,
+      "version": 1
+    }
   },
   "NgRequiredValidator": {
-    "id": "NgRequiredValidator",
-    "selector": "[required][ng-control],[required][ng-form-control],[required][ng-model]",
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {},
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": null,
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "NgRequiredValidator",
+      "selector": "[required][ng-control],[required][ng-form-control],[required][ng-model]",
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": null,
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [],
+      "changeDetection": null,
+      "version": 1
+    }
+  },
+  "FORM_DIRECTIVES": {
+    "kind": "alias",
+    "value": [
+      "NgControlName",
+      "NgControlGroup",
+      "NgFormControl",
+      "NgModel",
+      "NgFormModel",
+      "NgForm",
+      "NgSelectOption",
+      "DefaultValueAccessor",
+      "CheckboxControlValueAccessor",
+      "SelectControlValueAccessor",
+      "NgRequiredValidator"
+    ]
   }
 }

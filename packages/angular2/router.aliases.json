@@ -1,0 +1,9 @@
+{
+  "ROUTER_DIRECTIVES": {
+    "kind": "alias",
+    "value": [
+      "RouterOutlet",
+      "RouterLink"
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "NumberPipe": {
+    "kind": "type",
+    "value": {
+      "id": "NumberPipe",
+      "selector": null,
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": null,
+      "readAttributes": null,
+      "type": null,
+      "exportAs": null,
+      "callOnDestroy": null,
+      "callOnCheck": null,
+      "callOnInit": null,
+      "callOnChange": null,
+      "callOnAllChangesDone": null,
+      "events": null,
+      "changeDetection": null,
+      "version": 1
+    }
+  },
+  "DecimalPipe": {
+    "kind": "type",
+    "value": {
+      "id": "DecimalPipe",
+      "selector": null,
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": null,
+      "readAttributes": null,
+      "type": null,
+      "exportAs": null,
+      "callOnDestroy": null,
+      "callOnCheck": null,
+      "callOnInit": null,
+      "callOnChange": null,
+      "callOnAllChangesDone": null,
+      "events": null,
+      "changeDetection": null,
+      "version": 1
+    }
+  },
+  "PercentPipe": {
+    "kind": "type",
+    "value": {
+      "id": "PercentPipe",
+      "selector": null,
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": null,
+      "readAttributes": null,
+      "type": null,
+      "exportAs": null,
+      "callOnDestroy": null,
+      "callOnCheck": null,
+      "callOnInit": null,
+      "callOnChange": null,
+      "callOnAllChangesDone": null,
+      "events": null,
+      "changeDetection": null,
+      "version": 1
+    }
+  },
+  "CurrencyPipe": {
+    "kind": "type",
+    "value": {
+      "id": "CurrencyPipe",
+      "selector": null,
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": null,
+      "readAttributes": null,
+      "type": null,
+      "exportAs": null,
+      "callOnDestroy": null,
+      "callOnCheck": null,
+      "callOnInit": null,
+      "callOnChange": null,
+      "callOnAllChangesDone": null,
+      "events": null,
+      "changeDetection": null,
+      "version": 1
+    }
+  }
+}

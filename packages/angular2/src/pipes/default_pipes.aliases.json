@@ -1,0 +1,16 @@
+{
+  "DEFAULT_PIPES_LIST": {
+    "kind": "alias",
+    "value": [
+      "AsyncPipe",
+      "UpperCasePipe",
+      "LowerCasePipe",
+      "JsonPipe",
+      "LimitToPipe",
+      "DecimalPipe",
+      "PercentPipe",
+      "CurrencyPipe",
+      "DatePipe"
+    ]
+  }
+}

@@ -1,23 +1,26 @@
 {
   "ComponentUrlMapper": {
-    "id": "ComponentUrlMapper",
-    "selector": null,
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {},
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": null,
-    "readAttributes": null,
-    "type": null,
-    "exportAs": null,
-    "callOnDestroy": null,
-    "callOnCheck": null,
-    "callOnInit": null,
-    "callOnChange": null,
-    "callOnAllChangesDone": null,
-    "events": null,
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "ComponentUrlMapper",
+      "selector": null,
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": null,
+      "readAttributes": null,
+      "type": null,
+      "exportAs": null,
+      "callOnDestroy": null,
+      "callOnCheck": null,
+      "callOnInit": null,
+      "callOnChange": null,
+      "callOnAllChangesDone": null,
+      "events": null,
+      "changeDetection": null,
+      "version": 1
+    }
   }
 }

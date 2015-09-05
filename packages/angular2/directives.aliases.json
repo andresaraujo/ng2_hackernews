@@ -1,0 +1,14 @@
+{
+  "CORE_DIRECTIVES": {
+    "kind": "alias",
+    "value": [
+      "NgClass",
+      "NgFor",
+      "NgIf",
+      "NgNonBindable",
+      "NgSwitch",
+      "NgSwitchWhen",
+      "NgSwitchDefault"
+    ]
+  }
+}

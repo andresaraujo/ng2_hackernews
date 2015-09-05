@@ -1,55 +1,61 @@
 {
   "NgSelectOption": {
-    "id": "NgSelectOption",
-    "selector": "option",
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {},
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": null,
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "NgSelectOption",
+      "selector": "option",
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {},
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": null,
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [],
+      "changeDetection": null,
+      "version": 1
+    }
   },
   "SelectControlValueAccessor": {
-    "id": "SelectControlValueAccessor",
-    "selector": "select[ng-control],select[ng-form-control],select[ng-model]",
-    "compileChildren": true,
-    "hostProperties": {
-      "class.ng-untouched": "ngClassUntouched",
-      "class.ng-touched": "ngClassTouched",
-      "class.ng-pristine": "ngClassPristine",
-      "class.ng-invalid": "ngClassInvalid",
-      "class.ng-valid": "ngClassValid",
-      "class.ng-dirty": "ngClassDirty"
-    },
-    "hostListeners": {
-      "change": "onChange($event.target.value)",
-      "input": "onChange($event.target.value)",
-      "blur": "onTouched()"
-    },
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": null,
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "SelectControlValueAccessor",
+      "selector": "select[ng-control],select[ng-form-control],select[ng-model]",
+      "compileChildren": true,
+      "hostProperties": {
+        "class.ng-untouched": "ngClassUntouched",
+        "class.ng-touched": "ngClassTouched",
+        "class.ng-pristine": "ngClassPristine",
+        "class.ng-invalid": "ngClassInvalid",
+        "class.ng-valid": "ngClassValid",
+        "class.ng-dirty": "ngClassDirty"
+      },
+      "hostListeners": {
+        "change": "onChange($event.target.value)",
+        "input": "onChange($event.target.value)",
+        "blur": "onTouched()"
+      },
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": null,
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [],
+      "changeDetection": null,
+      "version": 1
+    }
   }
 }

@@ -1,27 +1,30 @@
 {
   "NgForm": {
-    "id": "NgForm",
-    "selector": "form:not([ng-no-form]):not([ng-form-model]),ng-form,[ng-form]",
-    "compileChildren": true,
-    "hostProperties": {},
-    "hostListeners": {
-      "submit": "onSubmit()"
-    },
-    "hostActions": {},
-    "hostAttributes": {},
-    "properties": [],
-    "readAttributes": [],
-    "type": 0,
-    "exportAs": "form",
-    "callOnDestroy": false,
-    "callOnCheck": false,
-    "callOnInit": false,
-    "callOnChange": false,
-    "callOnAllChangesDone": false,
-    "events": [
-      "ngSubmit"
-    ],
-    "changeDetection": null,
-    "version": 1
+    "kind": "type",
+    "value": {
+      "id": "NgForm",
+      "selector": "form:not([ng-no-form]):not([ng-form-model]),ng-form,[ng-form]",
+      "compileChildren": true,
+      "hostProperties": {},
+      "hostListeners": {
+        "submit": "onSubmit()"
+      },
+      "hostActions": {},
+      "hostAttributes": {},
+      "properties": [],
+      "readAttributes": [],
+      "type": 0,
+      "exportAs": "form",
+      "callOnDestroy": false,
+      "callOnCheck": false,
+      "callOnInit": false,
+      "callOnChange": false,
+      "callOnAllChangesDone": false,
+      "events": [
+        "ngSubmit"
+      ],
+      "changeDetection": null,
+      "version": 1
+    }
   }
 }

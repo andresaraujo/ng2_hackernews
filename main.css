@@ -1,55 +1,3 @@
-.spinner {
-  width: 50px;
-  height: 30px;
-  text-align: center;
-  font-size: 10px;
-}
-.spinner > div {
-  background-color: #333;
-  height: 100%;
-  width: 6px;
-  display: inline-block;
-  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
-  animation: stretchdelay 1.2s infinite ease-in-out;
-}
-.spinner .rect2 {
-  -webkit-animation-delay: -1.1s;
-  animation-delay: -1.1s;
-}
-.spinner .rect3 {
-  -webkit-animation-delay: -1s;
-  animation-delay: -1s;
-}
-.spinner .rect4 {
-  -webkit-animation-delay: -0.9s;
-  animation-delay: -0.9s;
-}
-.spinner .rect5 {
-  -webkit-animation-delay: -0.8s;
-  animation-delay: -0.8s;
-}
-@-webkit-keyframes stretchdelay {
-  0%,
-  40%,
-  100% {
-    -webkit-transform: scaleY(0.4);
-  }
-  20% {
-    -webkit-transform: scaleY(1);
-  }
-}
-@keyframes stretchdelay {
-  0%,
-  40%,
-  100% {
-    transform: scaleY(0.4);
-    -webkit-transform: scaleY(0.4);
-  }
-  20% {
-    transform: scaleY(1);
-    -webkit-transform: scaleY(1);
-  }
-}
 input {
   font-family: Courier;
   font-size: 10pt;
@@ -166,4 +114,96 @@ body {
 }
 .headerBar {
   background: #FF6600;
+}
+.spinner {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-size: 10px;
+}
+.spinner > div {
+  background-color: #333;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+@-webkit-keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+@keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+hn-item {
+  display: block;
+  margin: 10px 0;
+}
+.hnItem-title {
+  font-size: 10pt;
+  color: #828282;
+}
+.hnItem > section {
+  font-size: 7pt;
+}
+.hnItem > section,
+.hnItem > section a:link,
+.hnItem > section a:visited {
+  color: #828282;
+}
+.hnItem > section a:hover {
+  text-decoration: underline;
+}
+.hnItem--comment {
+  margin: 15px 0;
+}
+.hnItem--coment-content {
+  margin-top: 5px;
+}
+.hnItem--comment-children {
+  margin-left: 50px;
+}
+.itemDetail {
+  margin: 10px 20px;
+}
+.itemDetail-item:first-of-type {
+  margin-top: 30px;
+}
+.userDetail {
+  margin: 10px 20px;
+}
+.userDetail-item:first-of-type {
+  margin-top: 30px;
 }
