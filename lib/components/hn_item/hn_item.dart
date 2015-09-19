@@ -1,7 +1,7 @@
 library hacker_news.components.hnitem;
 
 import 'package:angular2/angular2.dart'
-    show Component, View, LifecycleEvent, CORE_DIRECTIVES;
+    show Component, View, LifecycleEvent, CORE_DIRECTIVES, OnInit;
 import 'package:angular2/router.dart' show ROUTER_DIRECTIVES;
 import 'package:timeago/timeago.dart' show TimeAgo;
 import 'package:ng2_hackernews/services/hn_api.dart' show HNApi;
@@ -19,13 +19,12 @@ final fuzzyTime = new TimeAgo();
       'newItemId: item-id',
       'newLoadChildren : load-children',
       'newTopLevel : top-level'
-    ],
-    lifecycle: const [LifecycleEvent.onInit])
+    ])
 @View(
     templateUrl: 'package:ng2_hackernews/components/hn_item/hn_item.html',
     directives: const [CORE_DIRECTIVES, HNItem, ParseHtml, ROUTER_DIRECTIVES],
     pipes: const [DomainPipe])
-class HNItem {
+class HNItem implements OnInit {
   HNApi _hnApi;
   String _itemId;
 

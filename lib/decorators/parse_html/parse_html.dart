@@ -6,13 +6,13 @@ import 'package:angular2/angular2.dart'
 import 'package:html/parser.dart' show parse;
 
 @Directive(
-    selector: '[parsehtml]', lifecycle: const [LifecycleEvent.onAllChangesDone])
+    selector: '[parsehtml]', lifecycle: const [LifecycleEvent.AfterContentInit])
 class ParseHtml {
   ElementRef ref;
 
   ParseHtml(this.ref);
 
-  onAllChangesDone() {
+  afterContentInit() {
     dom.Element element = ref.nativeElement;
     String raw = element.text;
     element.text = "";
