@@ -15,8 +15,10 @@ dependencies:
   less_dart: any
   browser: any
   html: any
+  dart_to_js_script_rewriter: '^0.1.0'
 transformers:
   - less_dart:
       include_path: ../lib/components/
   - angular2:
       entry_points: web/main.dart
+  - dart_to_js_script_rewriter
