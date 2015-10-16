@@ -2,7 +2,7 @@ library hacker_news.services.hn_api;
 
 import 'dart:async';
 import 'package:firebase/firebase.dart';
-import 'package:angular2/di.dart';
+import 'package:angular2/angular2.dart';
 
 @Injectable()
 class HNApi {

@@ -1,6 +1,5 @@
 import 'package:angular2/angular2.dart'
-    show Pipe, PipeTransform, ChangeDetectorRef;
-import 'package:angular2/di.dart' show Injectable;
+    show Pipe, PipeTransform, ChangeDetectorRef, Injectable;
 
 /**
  * Transforms a string that represents the url to show only the domain.

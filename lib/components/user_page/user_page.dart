@@ -10,7 +10,7 @@ import 'package:ng2_hackernews/services/hn_api.dart' show HNApi;
 
 final fuzzyTime = new TimeAgo();
 
-@Component(selector: 'page-user', viewBindings: const [HNApi])
+@Component(selector: 'page-user', viewProviders: const [HNApi])
 @View(
     templateUrl: 'package:ng2_hackernews/components/user_page/user_page.html',
     directives: const [NgFor, NgIf, HNItem, ParseHtml])

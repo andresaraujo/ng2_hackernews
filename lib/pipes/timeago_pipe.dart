@@ -1,6 +1,5 @@
 import 'package:angular2/angular2.dart'
-    show Pipe, PipeTransform, ChangeDetectorRef;
-import 'package:angular2/di.dart' show Injectable;
+    show Pipe, PipeTransform, ChangeDetectorRef, Injectable;
 import 'package:timeago/timeago.dart' show TimeAgo;
 
 final fuzzyTime = new TimeAgo();

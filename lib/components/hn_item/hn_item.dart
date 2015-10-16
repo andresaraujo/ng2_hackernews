@@ -14,8 +14,8 @@ final fuzzyTime = new TimeAgo();
 
 @Component(
     selector: 'hn-item',
-    viewBindings: const [HNApi],
-    properties: const [
+    viewProviders: const [HNApi],
+    inputs: const [
       'newItemId: item-id',
       'newLoadChildren : load-children',
       'newTopLevel : top-level'

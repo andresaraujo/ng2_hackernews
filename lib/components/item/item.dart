@@ -5,7 +5,7 @@ import 'package:angular2/router.dart' show RouteParams;
 import 'package:ng2_hackernews/services/hn_api.dart' show HNApi;
 import 'package:ng2_hackernews/components/hn_item/hn_item.dart' show HNItem;
 
-@Component(selector: 'page-item', viewBindings: const [HNApi])
+@Component(selector: 'page-item', viewProviders: const [HNApi])
 @View(
     templateUrl: 'package:ng2_hackernews/components/item/item.html',
     directives: const [NgFor, HNItem])

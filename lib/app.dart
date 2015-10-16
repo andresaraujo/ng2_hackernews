@@ -14,15 +14,15 @@ import 'package:ng2_hackernews/components/user_page/user_page.dart'
     templateUrl: 'package:ng2_hackernews/app.html',
     directives: const [NgIf, NgFor, RouterOutlet])
 @RouteConfig(const [
-  const Route(path: '/user/:id', component: UserPage, as: 'user'),
-  const Route(path: '/item/:id', component: ItemPage, as: 'item'),
-  const Route(path: '/home', component: Home, as: 'home'),
+  const Route(path: '/user/:id', component: UserPage, as: 'User'),
+  const Route(path: '/item/:id', component: ItemPage, as: 'Item'),
+  const Route(path: '/home', component: Home, as: 'Home'),
   const Route(path: '/', component: Home)
 ])
 class App {
   Router _router;
   App(this._router);
   goHome() {
-    _router.navigate("/home");
+    _router.navigateByUrl("/home");
   }
 }

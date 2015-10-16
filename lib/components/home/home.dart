@@ -4,7 +4,7 @@ import 'package:angular2/angular2.dart' show Component, NgFor, View;
 import 'package:ng2_hackernews/services/hn_api.dart' show HNApi;
 import 'package:ng2_hackernews/components/hn_item/hn_item.dart' show HNItem;
 
-@Component(selector: 'home-page', viewBindings: const [HNApi])
+@Component(selector: 'home-page', viewProviders: const [HNApi])
 @View(
     templateUrl: "package:ng2_hackernews/components/home/home.html",
     directives: const [NgFor, HNItem])
