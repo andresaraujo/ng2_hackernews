@@ -6,11 +6,11 @@
 
     <p>
         <a class="u-pointer"><u (click)="showSubmissions = !showSubmissions">show submitted stories and comments</u></a>
-    <div *ng-if="showSubmissions">
-        <div class="itemDetail-item" *ng-for="#itemId of data['submitted']">
-            <hn-item item-id="{{itemId}}" load-children="false"></hn-item>
+        <div *ng-if="showSubmissions">
+            <div class="itemDetail-item" *ng-for="#itemId of data['submitted']">
+                <hn-item item-id="{{itemId}}" load-children="false"></hn-item>
+            </div>
         </div>
-    </div>
     </p>
 
     <p>
