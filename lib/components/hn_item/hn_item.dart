@@ -1,25 +1,23 @@
 library hacker_news.components.hnitem;
 
-import 'package:angular2/angular2.dart'
-    show Component, View, LifecycleEvent, CORE_DIRECTIVES, OnInit;
-import 'package:angular2/router.dart' show ROUTER_DIRECTIVES;
-import 'package:timeago/timeago.dart' show TimeAgo;
-import 'package:ng2_hackernews/services/hn_api.dart' show HNApi;
+import 'package:angular2/angular2.dart';
+import 'package:angular2/router.dart';
 import 'package:ng2_hackernews/decorators/parse_html/parse_html.dart'
     show ParseHtml;
 import 'package:ng2_hackernews/pipes/domain_pipe.dart' show DomainPipe;
+import 'package:ng2_hackernews/services/hn_api.dart' show HNApi;
+import 'package:timeago/timeago.dart' show TimeAgo;
 
 const itemMap = const {'comment': 1, 'job': 2, 'poll': 3, 'story': 4};
 final fuzzyTime = new TimeAgo();
 
-@Component(
-    selector: 'hn-item',
-    viewProviders: const [HNApi],
-    inputs: const [
-      'newItemId: item-id',
-      'newLoadChildren : load-children',
-      'newTopLevel : top-level'
-    ])
+@Component(selector: 'hn-item', viewProviders: const [
+  HNApi
+], inputs: const [
+  'newItemId: itemId',
+  'newLoadChildren : loadChildren',
+  'newTopLevel : topLevel'
+])
 @View(
     templateUrl: 'package:ng2_hackernews/components/hn_item/hn_item.html',
     directives: const [CORE_DIRECTIVES, HNItem, ParseHtml, ROUTER_DIRECTIVES],
@@ -37,10 +35,6 @@ class HNItem implements OnInit {
 
   HNItem(this._hnApi) {}
 
-  onInit() {
-    _fetchData();
-  }
-
   set newItemId(itemId) {
     _itemId = itemId.toString();
   }
@@ -51,6 +45,10 @@ class HNItem implements OnInit {
 
   set newTopLevel(topLevel) {
     this.topLevel = topLevel;
+  }
+
+  ngOnInit() {
+    _fetchData();
   }
 
   _fetchData() async {

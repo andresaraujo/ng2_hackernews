@@ -1,34 +1,34 @@
-<div class="hnItem-loading spinner" *ng-if="data == null">
+<div class="hnItem-loading spinner" *ngIf="data == null">
     <div class="rect1"></div>
     <div class="rect2"></div>
     <div class="rect3"></div>
     <div class="rect4"></div>
     <div class="rect5"></div>
 </div>
-<div class="hnItem-container" *ng-if="data != null">
-    <div [ng-switch]="type">
-        <template [ng-switch-when]="1">
+<div class="hnItem-container" *ngIf="data != null">
+    <div [ngSwitch]="type">
+        <template [ngSwitchWhen]="1">
             <div class="hnItem--comment">
                 <header>
-          <span class="u-pointer" (click)="collapsed = !collapsed" *ng-if="!topLevel">
+          <span class="u-pointer" (click)="collapsed = !collapsed" *ngIf="!topLevel">
             [{{collapsed ? '+' : '-'}}]
           </span>
-                    <a [router-link]="['/User', {'id': data['by']}]">{{data['by']}}</a>
+                    <a [routerLink]="['/User', {'id': data['by']}]">{{data['by']}}</a>
                     <span>{{timeAgo}}</span> |
-                    <a [router-link]="['/Item', {'id': data['id']}]">link</a>
+                    <a [routerLink]="['/Item', {'id': data['id']}]">link</a>
                 </header>
                 <section class="hnItem--coment-content" [hidden]="data == null || collapsed == true">
                     <span parsehtml>{{data['text']}}</span>
                 </section>
-                <div class="hnItem--comment-children" *ng-if="loadChildren == true && data['kids'] != null"
+                <div class="hnItem--comment-children" *ngIf="loadChildren == true && data['kids'] != null"
                      [hidden]="collapsed">
-                    <div *ng-for="#kidId of data['kids']">
-                        <hn-item item-id="{{kidId}}"></hn-item>
+                    <div *ngFor="#kidId of data['kids']">
+                        <hn-item itemId="{{kidId}}"></hn-item>
                     </div>
                 </div>
             </div>
         </template>
-        <template [ng-switch-when]="2">
+        <template [ngSwitchWhen]="2">
             <div class="hnItem--story">
                 <header>
                     <a class="hnItem-title" [href]="data['url']">{{data['title']}}</a>
@@ -39,7 +39,7 @@
                 </section>
             </div>
         </template>
-        <template [ng-switch-when]="3">
+        <template [ngSwitchWhen]="3">
             <div class="hnItem--story">
                 <header>
                     <a class="hnItem-title" [href]="data['url']">{{data['title']}}</a>
@@ -47,14 +47,14 @@
                 </header>
                 <section [hidden]="data == null">
                     <span>{{data['score']}} points</span> by
-                    <a [router-link]="['/User', {'id': data['by']}]">{{data['by']}}</a>
+                    <a [routerLink]="['/User', {'id': data['by']}]">{{data['by']}}</a>
                     <span>{{timeAgo}}</span> |
-                    <a [router-link]="['/Item', {'id': data['id']}]">comments</a>
+                    <a [routerLink]="['/Item', {'id': data['id']}]">comments</a>
                 </section>
             </div>
         </template>
-        <!-- template [ng-switch-default] -->
-        <template [ng-switch-when]="4">
+        <!-- template [ngSwitchDefault] -->
+        <template [ngSwitchWhen]="4">
             <div class="hnItem--story">
                 <header>
                     <a class="hnItem-title" [href]="data['url']">{{data['title']}}</a>
@@ -62,9 +62,9 @@
                 </header>
                 <section [hidden]="data == null">
                     <span>{{data['score']}} points</span> by
-                    <a [router-link]="['/User', {'id': data['by']}]">{{data['by']}}</a>
+                    <a [routerLink]="['/User', {'id': data['by']}]">{{data['by']}}</a>
                     <span>{{timeAgo}}</span> |
-                    <a [router-link]="['/Item', {'id': data['id']}]">comments</a>
+                    <a [routerLink]="['/Item', {'id': data['id']}]">comments</a>
                 </section>
             </div>
         </template>

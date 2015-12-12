@@ -1,6 +1,7 @@
 library hacker_news.decorators.parse_html;
 
 import 'dart:html' as dom;
+
 import 'package:angular2/angular2.dart'
     show Directive, ElementRef, AfterContentInit;
 import 'package:html/parser.dart' show parse;
@@ -12,7 +13,7 @@ class ParseHtml implements AfterContentInit {
 
   ParseHtml(this.ref);
 
-  afterContentInit() {
+  ngAfterContentInit() {
     dom.Element element = ref.nativeElement;
     String raw = element.text;
     element.text = "";
