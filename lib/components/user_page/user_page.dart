@@ -3,7 +3,7 @@ library hacker_news.components.user_page;
 import 'package:angular2/angular2.dart' show Component, NgFor, NgIf, View;
 import 'package:angular2/router.dart' show RouteParams;
 import 'package:ng2_hackernews/components/hn_item/hn_item.dart' show HNItem;
-import 'package:ng2_hackernews/decorators/parse_html/parse_html.dart'
+import 'package:ng2_hackernews/directives/parse_html/parse_html.dart'
     show ParseHtml;
 import 'package:ng2_hackernews/services/hn_api.dart' show HNApi;
 import 'package:timeago/timeago.dart' show TimeAgo;
@@ -17,7 +17,7 @@ final fuzzyTime = new TimeAgo();
 class UserPage {
   HNApi api;
   bool showSubmissions;
-  var data = {};
+  Map<String, dynamic> data = {};
   String timeAgo;
 
   UserPage(this.api, RouteParams routeParams) {
@@ -25,7 +25,7 @@ class UserPage {
     this.showSubmissions = false;
   }
   _fetchUser(String userId) async {
-    data = await api.fetchUser(userId) as Map;
+    data = await api.fetchUser(userId);
     data['submitted'] = (data['submitted'] as List).take(30);
     timeAgo = fuzzyTime.timeAgo(data['created'] * 1000);
   }

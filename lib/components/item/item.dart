@@ -19,9 +19,9 @@ class ItemPage {
     _fetchItem();
   }
   _fetchItem() async {
-    var data = await api.fetchItem("$itemId");
+    Map<String, dynamic> data = await api.fetchItem("$itemId");
     if (data != null) {
-      childrenIds = data['kids'];
+      childrenIds = data['kids'] as List<String>;
     }
   }
 }

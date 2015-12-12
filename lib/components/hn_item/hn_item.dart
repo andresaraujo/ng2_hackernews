@@ -2,7 +2,7 @@ library hacker_news.components.hnitem;
 
 import 'package:angular2/angular2.dart';
 import 'package:angular2/router.dart';
-import 'package:ng2_hackernews/decorators/parse_html/parse_html.dart'
+import 'package:ng2_hackernews/directives/parse_html/parse_html.dart'
     show ParseHtml;
 import 'package:ng2_hackernews/pipes/domain_pipe.dart' show DomainPipe;
 import 'package:ng2_hackernews/services/hn_api.dart' show HNApi;
@@ -11,9 +11,7 @@ import 'package:timeago/timeago.dart' show TimeAgo;
 const itemMap = const {'comment': 1, 'job': 2, 'poll': 3, 'story': 4};
 final fuzzyTime = new TimeAgo();
 
-@Component(
-    selector: 'hn-item',
-    viewProviders: const [HNApi])
+@Component(selector: 'hn-item', viewProviders: const [HNApi])
 @View(
     templateUrl: 'package:ng2_hackernews/components/hn_item/hn_item.html',
     directives: const [CORE_DIRECTIVES, HNItem, ParseHtml, ROUTER_DIRECTIVES],
@@ -33,9 +31,7 @@ class HNItem implements OnInit {
   HNItem(this._hnApi);
 
   @Input('itemId')
-  set newItemId(itemId) {
-    _itemId = itemId.toString();
-  }
+  set newItemId(itemId) => _itemId = itemId.toString();
 
   ngOnInit() {
     _fetchData();

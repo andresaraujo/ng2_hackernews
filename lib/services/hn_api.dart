@@ -10,13 +10,13 @@ class HNApi {
 
   Map userStore = {};
   Map itemStore = {};
-  List topStories = [];
+  List<Map<String, dynamic>> topStories = [];
 
-  Future<List> fetchTopStories() {
+  Future<List<Map<String, dynamic>>> fetchTopStories() {
     return topStoriesRef().once('value').then((value) {
-      topStories = (value.val() as List).take(10);
+      topStories = (value.val() as List<Map<String, dynamic>>).take(10);
       return new Future.value(topStories);
-    });
+    }) as Future<List<Map<String, dynamic>>>;
   }
 
   Future<List> fetchItems(List<String> items) {
@@ -31,21 +31,21 @@ class HNApi {
     return Future.wait(promises);
   }
 
-  Future fetchItem(String item) {
+  Future<Map<String, dynamic>> fetchItem(String item) {
     if (item == null) {
       return new Future.error("item should not be null");
     }
-    return fetchItems([item]).then((data) => data[0]);
+    return fetchItems([item]).then((data) => data[0]) as Future<Map<String, dynamic>>;
   }
 
-  Future fetchUser(String userId) {
+  Future<Map<String, dynamic>> fetchUser(String userId) {
     if (userId == null || userId.isEmpty) {
       return new Future.error("user id should not be null");
     }
 
     return userRef(userId).onValue.first.then((value) {
       return new Future.value(value.snapshot.val());
-    });
+    }) as Future<Map<String, dynamic>>;
   }
 
   Firebase topStoriesRef() {
