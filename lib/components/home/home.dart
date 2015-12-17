@@ -10,8 +10,8 @@ import 'package:ng2_hackernews/services/hn_api.dart' show HNApi;
     directives: const [NgFor, HNItem])
 class Home {
   HNApi api;
-  List topStories = [];
+  Iterable<Map<String, dynamic>> topStories = [];
   Home(this.api) {
-    api.fetchTopStories().then((value) => this.topStories = value);
+    api.fetchTopStories().then((Iterable<Map<String, dynamic>> value) => this.topStories = value);
   }
 }
