@@ -23,7 +23,7 @@ class HNItem implements OnInit {
   @Input() bool loadChildren = true;
   @Input() bool topLevel = false;
 
-  var data;
+  Map<String, dynamic> data;
   bool collapsed = false;
   int type = 0;
   String timeAgo;

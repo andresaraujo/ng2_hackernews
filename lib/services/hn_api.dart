@@ -10,13 +10,10 @@ class HNApi {
 
   Map userStore = {};
   Map itemStore = {};
-  List<Map<String, dynamic>> topStories = [];
 
-  Future<List<Map<String, dynamic>>> fetchTopStories() {
-    return topStoriesRef().once('value').then((value) {
-      topStories = (value.val() as List<Map<String, dynamic>>).take(10);
-      return new Future.value(topStories);
-    }) as Future<List<Map<String, dynamic>>>;
+  Future<Iterable<Map<String, dynamic>>> fetchTopStories() {
+    return topStoriesRef().once('value')
+        .then((DataSnapshot value) => (value.val() as Iterable<Map<String, dynamic>>).take(10));
   }
 
   Future<List> fetchItems(List<String> items) {
