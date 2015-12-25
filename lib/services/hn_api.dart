@@ -18,7 +18,7 @@ class HNApi {
 
   Future<List> fetchItems(List<String> items) {
     List<Future> promises = [];
-    items.forEach((id) {
+    items.forEach((String id) {
       promises.add(itemRef(id).onValue.first.then((value) {
         itemStore[id] = value.snapshot.val();
         return new Future.value(itemStore[id]);
@@ -32,7 +32,7 @@ class HNApi {
     if (item == null) {
       return new Future.error("item should not be null");
     }
-    return fetchItems([item]).then((data) => data[0]) as Future<Map<String, dynamic>>;
+    return fetchItems([item]).then((List data) => data[0]) as Future<Map<String, dynamic>>;
   }
 
   Future<Map<String, dynamic>> fetchUser(String userId) {
@@ -40,7 +40,7 @@ class HNApi {
       return new Future.error("user id should not be null");
     }
 
-    return userRef(userId).onValue.first.then((value) {
+    return userRef(userId).onValue.first.then((Event value) {
       return new Future.value(value.snapshot.val());
     }) as Future<Map<String, dynamic>>;
   }
