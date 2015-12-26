@@ -31,11 +31,7 @@ class DomainPipe implements PipeTransform {
     if (value == null || value.isEmpty) {
       return value;
     }
-    List<String> parts = value.split('/');
-    if (parts.length < 2) {
-      return value;
-    }
-    return parts[2].replaceFirst('www.', '');
+    return _parseDomain(value);
   }
 
   create(ChangeDetectorRef cdRef) {
@@ -43,4 +39,16 @@ class DomainPipe implements PipeTransform {
   }
 
   DomainPipe();
+}
+
+_parseDomain(String url) {
+  url = url.replaceFirst(new RegExp(r'https?:\/\/(www.)?|www.'), '');
+  if(url.contains('/')){
+    var parts = url.split('/');
+    url = parts[0];
+  } else if (url.contains('?')) {
+    var parts = url.split('?');
+    url = parts[0];
+  }
+  return url;
 }

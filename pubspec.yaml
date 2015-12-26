@@ -14,6 +14,11 @@ dependencies:
   browser: any
   html: any
   dart_to_js_script_rewriter: '^0.1.0'
+
+dev_dependencies:
+  test: '^0.12.6'
+  angular2_testing: any
+
 transformers:
   - less_dart:
       include_path: ../lib/components/
