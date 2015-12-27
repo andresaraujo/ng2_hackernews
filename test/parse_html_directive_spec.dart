@@ -18,7 +18,7 @@ import 'package:ng2_hackernews/directives/parse_html/parse_html.dart';
 
 // This is the component we will be testing.
 @Component(selector: 'test-cmp')
-@View(directives: const [ParseHtml])
+@View(template: '<div><span parsehtml>{{raw}}</span></div>', directives: const [ParseHtml])
 class TestComponent {
   String raw;
   TestComponent() {
@@ -26,14 +26,11 @@ class TestComponent {
   }
 }
 
-const TEMPLATE = '<div><span parsehtml>{{raw}}</span></div>';
-
 void main() {
   initAngularTests();
 
   ngTest('should parse a raw html string', (TestComponentBuilder tcb) async {
     var rootTC = await tcb
-        .overrideTemplate(TestComponent, TEMPLATE)
         .createAsync(TestComponent);
 
     rootTC.detectChanges();

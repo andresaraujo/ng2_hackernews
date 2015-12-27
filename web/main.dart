@@ -6,12 +6,14 @@ import 'package:angular2/bootstrap.dart' show bootstrap;
 import 'package:angular2/router.dart' show APP_BASE_HREF, HashLocationStrategy, LocationStrategy, ROUTER_PROVIDERS;
 
 import 'package:ng2_hackernews/ng2_hackernews.dart' show App;
+import 'package:ng2_hackernews/services/hn_api.dart';
 
 main() {
 
   bootstrap(App, [
     ROUTER_PROVIDERS,
     provide(APP_BASE_HREF, useValue: '/'),
-    provide(LocationStrategy, useClass: HashLocationStrategy)
+    provide(LocationStrategy, useClass: HashLocationStrategy),
+    provide(HNApi)
   ]);
 }

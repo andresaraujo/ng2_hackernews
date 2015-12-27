@@ -11,10 +11,10 @@ import 'package:timeago/timeago.dart' show TimeAgo;
 const itemMap = const {'comment': 1, 'job': 2, 'poll': 3, 'story': 4};
 final fuzzyTime = new TimeAgo();
 
-@Component(selector: 'hn-item', viewProviders: const [HNApi])
+@Component(selector: 'hn-item')
 @View(
     templateUrl: 'package:ng2_hackernews/components/hn_item/hn_item.html',
-    directives: const [CORE_DIRECTIVES, HNItem, ParseHtml, ROUTER_DIRECTIVES],
+    directives: const [CORE_DIRECTIVES, HNItem, ParseHtml, RouterLink],
     pipes: const [DomainPipe])
 class HNItem implements OnInit {
   HNApi _hnApi;
@@ -33,8 +33,8 @@ class HNItem implements OnInit {
   @Input('itemId')
   set newItemId(itemId) => _itemId = itemId.toString();
 
-  ngOnInit() {
-    _fetchData();
+  ngOnInit() async {
+    await _fetchData();
   }
 
   _fetchData() async {
